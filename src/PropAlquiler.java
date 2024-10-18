@@ -15,6 +15,7 @@ public class PropAlquiler {
 		System.out.println("0- Salir ");
 		int propAlquileres= teclado.nextInt();
 		Propiedades mostrarPropiedades = new Propiedades();
+		ModificarProp modificarPropiedades = new ModificarProp();
 		
 		switch (propAlquileres) {
 			case 1: AlquilerCasas.CasasAlquiler();
@@ -23,7 +24,9 @@ public class PropAlquiler {
 				break;
 			case 3:
 				break;
-			case 4: mostrarPropiedades.MostrarPropiedades();
+			case 4: modificarPropiedades.ModificarPropiedades();
+				break;
+			case 5: mostrarPropiedades.MostrarPropiedades();
 				break;
 			case 0: InmobiliariaMartinez.main(null);
 				break;
