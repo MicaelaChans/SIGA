@@ -1,4 +1,4 @@
-import java.util.Scanner;
+/*import java.util.Scanner;
 
 public class Menu {
 
@@ -32,5 +32,5 @@ public class Menu {
 			teclado.close(); 
 			return true;
 			}
-	}
+	}*/
 
