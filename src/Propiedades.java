@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Propiedades {
 
-	public boolean MostrarPropiedades() {
+	public void MostrarPropiedades() {
 		
 		Scanner teclado = new Scanner(System.in); 
 		PropAlquiler alquiler =new PropAlquiler();
@@ -10,7 +10,6 @@ public class Propiedades {
 		Menu mostrarMenu = new Menu();
 		IngresosProp ingresos = new  IngresosProp();
 		ModificarProp modificar = new ModificarProp();
-		int menuPropiedades= teclado.nextInt();
 		
 		System.out.println("Usted Ingreso al Menu Propiedades");
 		System.out.println("Por Favor Ingrese una Opcion");	
@@ -21,6 +20,7 @@ public class Propiedades {
 		System.out.println("4- Modificar ");
 		System.out.println("5- Volver ");
 		System.out.println("0- Salir ");		
+		int menuPropiedades= teclado.nextInt();
 		
 		
 		switch(menuPropiedades) {
@@ -32,7 +32,7 @@ public class Propiedades {
 				break;
 			case 4:modificar.ModificarPropiedades();
 				break;
-			case 5:mostrarMenu. MostrarMenu();
+			case 5:mostrarMenu.MostrarMenu();
 				break;
 			case 0:InmobiliariaMartinez.main(null);
 				break;
@@ -40,7 +40,6 @@ public class Propiedades {
 		 
 		}
 		teclado.close();
-		return true;
+		//return true;
 	}
-
 }

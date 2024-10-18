@@ -16,13 +16,14 @@ public class PropAlquiler {
 		int propAlquileres= teclado.nextInt();
 		Propiedades mostrarPropiedades = new Propiedades();
 		ModificarProp modificarPropiedades = new ModificarProp();
+		IngresosProp ingresosProp = new IngresosProp();
 		
 		switch (propAlquileres) {
 			case 1: AlquilerCasas.CasasAlquiler();
 				break;
 			case 2: AlquilerAptos.AptosAlquiler();
 				break;
-			case 3:
+			case 3: ingresosProp.PropIngresos();
 				break;
 			case 4: modificarPropiedades.ModificarPropiedades();
 				break;

@@ -16,6 +16,7 @@ public class InmobiliariaMartinez {
 			 System.out.println(mostrarMenu.MostrarMenu());
 		 }else if (menu == 0){
 			 System.out.println("Usted Salio del Programa S.I.G.A.");
+			 System.out.println("Hasta la póxima.");
 		 }
 		
 		 teclado.close();
