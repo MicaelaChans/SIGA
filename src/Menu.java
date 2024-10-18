@@ -5,8 +5,8 @@ public class Menu {
 		public boolean MostrarMenu() {
 			
 			Scanner teclado = new Scanner(System.in);                 
-			System.out.println("Menu: ");
-			System.out.println("Ingrese una Opcion: ");
+			System.out.println("Menú: ");
+			System.out.println("Ingrese una Opción: ");
 			
 			
 			System.out.println("1- Propiedades ");
@@ -26,7 +26,7 @@ public class Menu {
 					break;
 				case 0:Salir.MostrarSalir();
 					break;
-				default: System.out.println("Ingrese una Opcion Valida");
+				default: System.out.println("Ingrese una Opción Valida");
 				
 				}	
 			teclado.close(); 
