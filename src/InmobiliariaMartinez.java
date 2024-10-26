@@ -6,15 +6,13 @@ public class InmobiliariaMartinez {
 		Scanner teclado = new Scanner(System.in); 
 		System.out.println("Bienvenidos a S.I.G.A.");
 		System.out.println("Sistemas Inmobiliarios de Gestión Automática.");
-		System.out.println("Ingrese una Opcion: Entrar-1/Salir-0");
-		
+		System.out.println("Ingrese una Opcion: Entrar-1/Salir-0");		
 		int menu = teclado.nextInt();		
 				
 		do {
 			if (menu ==1) {				
 				System.out.println("Menú: ");
-				System.out.println("Ingrese una Opción: ");
-				
+				System.out.println("Ingrese una Opción: ");				
 				
 				System.out.println("1- Propiedades ");
 				System.out.println("2- Propietarios ");
@@ -22,18 +20,19 @@ public class InmobiliariaMartinez {
 				System.out.println("0- Salir ");
 				
 				Propiedades mostrarPropiedades = new Propiedades();
-				
+				Propietarios mostrarPropietarios = new Propietarios();
+				Salir sale = new Salir();
 				int mostrarMenu = teclado.nextInt();
 				
 				if (mostrarMenu ==1) {
 					switch (menu) { 
 					case 1: mostrarPropiedades.MostrarPropiedades();
 						break;
-					case 2: Propietarios.MostrarPropietarios();
+					case 2: mostrarPropietarios.MostrarPropietarios();
 						break;
 					case 3:Inquilinos.MostrarInquilinos();
 						break;
-					case 0:Salir.MostrarSalir();
+					case 0:sale.MostrarSalir();
 						break;
 					default: System.out.println("Ingrese una Opción Valida");
 				}				
@@ -42,7 +41,6 @@ public class InmobiliariaMartinez {
 		}while(menu == 0);
 			 System.out.println("Usted Salió del Programa S.I.G.A.");
 			 System.out.println("Hasta la Próxima.");
-		
 		 
 		 teclado.close();
 		 }

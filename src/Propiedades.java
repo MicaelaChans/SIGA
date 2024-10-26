@@ -41,6 +41,5 @@ public class Propiedades {
 		 
 		}
 		teclado.close();
-		//return true;
 	}
 }
