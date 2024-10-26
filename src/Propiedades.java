@@ -11,7 +11,7 @@ public class Propiedades {
 		IngresosProp ingresos = new  IngresosProp();
 		ModificarProp modificar = new ModificarProp();
 		Salir sale = new Salir();
-		
+	
 		System.out.println("Usted Ingreso al Menú Propiedades");
 		System.out.println("Por Favor Ingrese una Opción");	
 		

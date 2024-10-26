@@ -13,15 +13,27 @@ public class PropVentas {
 		System.out.println("5- Volver ");
 		System.out.println("0- Salir ");
 		int propVenta= teclado.nextInt();
+		Propiedades mostrarPropiedades = new Propiedades();
+		ModificarProp modificarPropiedades = new ModificarProp();
+		IngresosProp ingresosProp = new IngresosProp();
+		VentasCasas casasVentas = new VentasCasas();
+		VentasAptos aptosVentas = new VentasAptos();
 		
 		switch (propVenta){
-				
-				
-			}
-			
-			
-			
-			
+		case 1: casasVentas.VentaCasa();
+		break;
+	case 2: aptosVentas.VentaApto();
+		break;
+	case 3: ingresosProp.PropIngresos();
+		break;
+	case 4: modificarPropiedades.ModificarPropiedades();
+		break;
+	case 5: mostrarPropiedades.MostrarPropiedades();
+		break;
+	case 0: InmobiliariaMartinez.main(null);
+		break;
+    default: System.out.println("Ingrese una Opcion Valida");
+		}	
 			teclado.close();
 		}
 }

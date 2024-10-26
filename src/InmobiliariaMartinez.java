@@ -21,27 +21,26 @@ public class InmobiliariaMartinez {
 				
 				Propiedades mostrarPropiedades = new Propiedades();
 				Propietarios mostrarPropietarios = new Propietarios();
+				Inquilinos mostrarInquilinos = new Inquilinos();
 				Salir sale = new Salir();
 				int mostrarMenu = teclado.nextInt();
 				
-				if (mostrarMenu ==1) {
-					switch (menu) { 
+					switch (mostrarMenu) { 
 					case 1: mostrarPropiedades.MostrarPropiedades();
 						break;
 					case 2: mostrarPropietarios.MostrarPropietarios();
 						break;
-					case 3:Inquilinos.MostrarInquilinos();
+					case 3: mostrarInquilinos.MostrarInquilinos();
 						break;
 					case 0:sale.MostrarSalir();
 						break;
 					default: System.out.println("Ingrese una Opción Valida");
 				}				
 			 }	
-			}	
 		}while(menu == 0);
-			 System.out.println("Usted Salió del Programa S.I.G.A.");
-			 System.out.println("Hasta la Próxima.");
-		 
+			System.out.println("Usted Salió del Programa S.I.G.A.");
+			System.out.println("Hasta la Próxima.");
+		 //No nos sale del programa ni bien lo corremos.
 		 teclado.close();
 		 }
 }
