@@ -14,7 +14,7 @@ public class PropVentas {
 		System.out.println("0- Salir ");
 		int propVenta= teclado.nextInt();
 		Propiedades mostrarPropiedades = new Propiedades();
-		ModificarProp modificarPropiedades = new ModificarProp();
+		ModificarProp identificadorModificarPropiedades = new ModificarProp();
 		IngresosProp ingresosProp = new IngresosProp();
 		VentasCasas casasVentas = new VentasCasas();
 		VentasAptos aptosVentas = new VentasAptos();
@@ -26,7 +26,7 @@ public class PropVentas {
 		break;
 	case 3: ingresosProp.PropIngresos();
 		break;
-	case 4: modificarPropiedades.ModificarPropiedades();
+	case 4: identificadorModificarPropiedades.ModificarPropiedades();
 		break;
 	case 5: mostrarPropiedades.MostrarPropiedades();
 		break;

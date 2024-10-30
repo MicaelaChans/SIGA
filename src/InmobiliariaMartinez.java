@@ -35,12 +35,16 @@ public class InmobiliariaMartinez {
 					case 0:sale.MostrarSalir();
 						break;
 					default: System.out.println("Ingrese una Opción Valida");
-				}				
-			 }	
+					}				
+			 	}	
 		}while(menu == 0);
-			System.out.println("Usted Salió del Programa S.I.G.A.");
-			System.out.println("Hasta la Próxima.");
-		 //No nos sale del programa ni bien lo corremos.
-		 teclado.close();
-		 }
+		 //Salir sale = new Salir();	
+	     //sale.MostrarSalir();
+		System.out.println("Usted Salió del Programa S.I.G.A.");
+		System.out.println("Hasta la Próxima.");
+	    //No nos sale del programa ni bien lo corremos.
+		
+	     
+	     teclado.close();
+	  }
 }

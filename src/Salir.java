@@ -10,14 +10,14 @@ public class Salir {
 		InmobiliariaMartinez mostrarMenu = new InmobiliariaMartinez ();
 		
 		
-		if (salir ==1 || salir==2) {			
-		switch(salir){
-		case 1:System.out.println("El Programa se ha Cerrado");
-			break;
-		case 2:mostrarMenu.main(null);
-			break;
-		default:System.out.println("Ingrese una Opción Valida"); 	
-		}	
-		}teclado.close();		
+		if (salir ==1) {			
+			System.out.println("Usted Salió del Programa");
+			System.out.println("Hasta la Próxima");
+			
+		}else if (salir ==0) {
+			mostrarMenu.main(null);
+		}
+		
+		teclado.close();		
 	}
 }

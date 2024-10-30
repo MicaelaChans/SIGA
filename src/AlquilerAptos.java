@@ -6,6 +6,8 @@ public class AlquilerAptos {
 		System.out.println("Usted Ingreso al Menu Alquiler de Apartamentos");
 		System.out.println("Por Favor Ingrese una Opcion");	
 		
+		
+		
 		teclado.close();
 	}
 }

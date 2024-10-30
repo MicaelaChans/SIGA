@@ -5,12 +5,12 @@ public class Propiedades {
 	public void MostrarPropiedades() {
 		
 		Scanner teclado = new Scanner(System.in); 
-		PropAlquiler alquiler =new PropAlquiler();
-		PropVentas ventas =new PropVentas();
-		InmobiliariaMartinez mostrarMenu = new InmobiliariaMartinez ();
-		IngresosProp ingresos = new  IngresosProp();
-		ModificarProp modificar = new ModificarProp();
-		Salir sale = new Salir();
+		PropAlquiler identificadorAlquiler =new PropAlquiler();
+		PropVentas identificadorVentas =new PropVentas();
+		InmobiliariaMartinez identificadorMostrarMenu = new InmobiliariaMartinez ();
+		IngresosProp identificadorIngresos = new  IngresosProp();
+		ModificarProp identificadorModificar = new ModificarProp();
+		Salir identificadorSalir = new Salir();
 	
 		System.out.println("Usted Ingreso al Menú Propiedades");
 		System.out.println("Por Favor Ingrese una Opción");	
@@ -25,21 +25,19 @@ public class Propiedades {
 		
 		
 		switch(menuPropiedades) {
-			case 1: alquiler.AlquilerProp();
+			case 1: identificadorAlquiler.AlquilerProp();
 				break;
-			case 2:ventas.VentasProp();
+			case 2:identificadorVentas.VentasProp();
 				break;
-			case 3:ingresos.PropIngresos();
+			case 3:identificadorIngresos.PropIngresos();
 				break;
-			case 4:modificar.ModificarPropiedades();
+			case 4:identificadorModificar.ModificarPropiedades();
 				break;
-			case 5:mostrarMenu.main(null);
+			case 5:identificadorMostrarMenu.main(null);
 				break;
-			case 0:sale.MostrarSalir();
+			case 0:identificadorSalir.MostrarSalir();
 				break;
-			default: System.out.println("Ingrese una Opcion Valida");	
-		 
-		}
-		teclado.close();
+			default: System.out.println("Ingrese una Opcion Valida");			 
+		}teclado.close();		
 	}
 }
