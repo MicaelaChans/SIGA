@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
-public class Inquilinos {
+public class Inquilinos extends Clientes {
+	public Inquilinos(String nombre, String apellido, int documento, char correo, int telefono, String tipo, int id) {
+		super(nombre, apellido, documento, correo, telefono, tipo, id);
+	}
 
 	public void MostrarInquilinos () {
 		Scanner teclado = new Scanner(System.in);
@@ -14,7 +17,17 @@ public class Inquilinos {
 		}else if (inquilinos==0){
 			identificadorMostrarMenu.main(null);
 		}
-		teclado.close();
+		//teclado.close();
+	}
+	
+	public String toString() {
+		return "Nombre: " + getNombre() + 
+				" Apellido: " + getApellido() + 
+				" Documento: " + getDocumento() + 
+				" Correo: " + getCorreo() +
+				" Telefono: " + getTelefono() +
+				" Tipo: " + getTipo() +
+				" Id: " + getId(); 
 	}
 
 }

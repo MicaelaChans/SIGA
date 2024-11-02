@@ -1,7 +1,14 @@
 import java.util.Scanner;
 
-public class Propietarios {
-
+public class Propietarios extends Clientes {
+	
+	private String direccion;
+	public Propietarios(String nombre, String apellido, int documento, char correo, int telefono, String tipo, int id) {
+		//super(nombre, apellido, documento, correo, telefono, tipo, id);
+		//No funciona, no reconoce
+		setDireccion(direccion);
+	}
+	/*
 	public void MostrarPropietarios() {
 		Scanner teclado = new Scanner(System.in);
 		PropAlquiler alquiler =new PropAlquiler();
@@ -39,7 +46,25 @@ public class Propietarios {
 	 
 	}
 		
-		teclado.close();
+	}*/
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+	public String toString() {
+		return "Nombre: " + getNombre() + 
+				" Apellido: " + getApellido() + 
+				" Documento: " + getDocumento() + 
+				" Correo: " + getCorreo() +
+				" Telefono: " + getTelefono() +
+				" Tipo: " + getTipo() +
+				" Direccion" + getDireccion() +
+				" Id: " + getId(); 
 	}
 
 }

@@ -20,7 +20,7 @@ public class InmobiliariaMartinez {
 				System.out.println("0- Salir ");
 				
 				Propiedades mostrarPropiedades = new Propiedades();
-				Propietarios mostrarPropietarios = new Propietarios();
+				//Propietarios mostrarPropietarios = new Propietarios();
 				Inquilinos mostrarInquilinos = new Inquilinos();
 				Salir sale = new Salir();
 				int mostrarMenu = teclado.nextInt();
@@ -28,8 +28,8 @@ public class InmobiliariaMartinez {
 					switch (mostrarMenu) { 
 					case 1: mostrarPropiedades.MostrarPropiedades();
 						break;
-					case 2: mostrarPropietarios.MostrarPropietarios();
-						break;
+					//case 2: mostrarPropietarios.MostrarPropietarios();
+						//break;
 					case 3: mostrarInquilinos.MostrarInquilinos();
 						break;
 					case 0:sale.MostrarSalir();
@@ -45,6 +45,6 @@ public class InmobiliariaMartinez {
 	    //No nos sale del programa ni bien lo corremos.
 		
 	     
-	     teclado.close();
+	     //teclado.close();
 	  }
 }
