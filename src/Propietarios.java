@@ -1,8 +1,9 @@
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class Propietarios /*extends Clientes */{
 	
 	private String direccion;
+	private static ArrayList<Propietarios>Propietarios = new ArrayList<>();
 	/*public Propietarios(String nombre, String apellido, int documento, char correo, int telefono, String tipo, int id) {
 		//super(nombre, apellido, documento, correo, telefono, tipo, id);
 		//No funciona, no reconoce
@@ -47,12 +48,35 @@ public class Propietarios /*extends Clientes */{
 	}
 	
 	public void crearPropietario() {
-		int id = 0, documento = 0, telefono = 0;
-		String nombre = " ", apellido = " ", tipo = " ";
-		char correo = ' ';
+		int id = 0, documento = 0, telefono = 0,tmp = 0;
+		String nombre = " ", apellido = " ", tipo = " ", tmp1 = "";
+		char correo = ' ', tmp2 = ' ';
 		
 		Scanner teclado = new Scanner (System.in);
-		id = teclado.nextInt();
+		tmp = teclado.nextInt();
+		tmp1 = teclado.nextLine();
+		tmp2 = teclado.next().charAt(0);
+
+		System.out.println("Ingrese el nombre: ");
+        tmp1 = nombre;
+        System.out.println("Ingrese el apellido: ");
+		tmp1 = apellido;
+		System.out.println("Ingrese el documento: ");
+		tmp = documento;
+		System.out.println("Ingrese el correo: ");
+		tmp2 = correo;
+		System.out.println("Ingrese el telefono: ");
+		tmp =  telefono;
+		System.out.println("Ingrese el id: ");
+        tmp = id;
+        System.out.println("Ingrese el tipo: ");
+		tmp1 = tipo;
+		
+		Propietarios propietario = new Propietarios(nombre,apellido,tipo);
+		Propietarios.add(propietario);
+		
+		
+		
 	}
 
 	public String getDireccion() {
@@ -73,5 +97,13 @@ public class Propietarios /*extends Clientes */{
 				" Direccion" + getDireccion() +
 				" Id: " + getId(); 
 	}*/
+
+	public static ArrayList<Propietarios> getPropietarios() {
+		return Propietarios;
+	}
+
+	public static void setPropietarios(ArrayList<Propietarios> propietarios) {
+		Propietarios = propietarios;
+	}
 
 }
