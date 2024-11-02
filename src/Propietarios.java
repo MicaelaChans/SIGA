@@ -45,6 +45,15 @@ public class Propietarios /*extends Clientes */{
 	}
 		
 	}
+	
+	public void crearPropietario() {
+		int id = 0, documento = 0, telefono = 0;
+		String nombre = " ", apellido = " ", tipo = " ";
+		char correo = ' ';
+		
+		Scanner teclado = new Scanner (System.in);
+		id = teclado.nextInt();
+	}
 
 	public String getDireccion() {
 		return direccion;
