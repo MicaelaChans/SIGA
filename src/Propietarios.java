@@ -72,7 +72,7 @@ public class Propietarios /*extends Clientes */{
         System.out.println("Ingrese el tipo: ");
 		tmp1 = tipo;
 		
-		Propietarios propietario = new Propietarios(nombre,apellido,tipo);
+		Propietarios propietario = new Propietarios();
 		Propietarios.add(propietario);
 		
 		

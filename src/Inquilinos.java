@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Inquilinos extends Clientes {
 	public Inquilinos(String nombre, String apellido, int documento, char correo, int telefono, String tipo, int id) {
-		super(nombre, apellido, documento, correo, telefono, tipo, id);
+		super(id, documento, nombre, apellido, correo, telefono, tipo);
 	}
 
 	public void MostrarInquilinos () {
