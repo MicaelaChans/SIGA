@@ -8,7 +8,7 @@ public class MantenimientoInquilino {
 	private static Utilidad util = new Utilidad();
 	
 	public void mostrarMenu() {
-		System.out.println("Usted Ingresó al Menú de Clientes");
+		System.out.println("Usted Ingreso al Menu de Clientes");
 		System.out.println("1- Agregar");
 		System.out.println("2- Eliminar");
 		System.out.println("3- Modificar");
@@ -33,7 +33,7 @@ public class MantenimientoInquilino {
 		case 6: //volverMenu();
 			break;
 		case 0: salir();
-			default: System.out.println("Error, ingrese una opción válida");
+			default: System.out.println("Error, ingrese una opcion valida");
 		}
 		
 	}

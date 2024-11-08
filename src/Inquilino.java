@@ -7,12 +7,8 @@ public class Inquilino extends Cliente {
 
 public void Inquilinos() {
 	Scanner teclado = new Scanner(System.in);
-	System.out.println("Usted ingresó a la Opción Inquilinos");		
+	System.out.println("Usted ingrese al menu Inquilino");		
 	int inquilinos = teclado.nextInt();
-	
-	
-	
-	
 }
 
 public String toString() {

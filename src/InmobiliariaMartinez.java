@@ -26,6 +26,7 @@ public class InmobiliariaMartinez {
 		System.out.println("Ingrese una opcion: ");
 		System.out.println("1- Clientes");
 		System.out.println("2- Inmuebles");
+		System.out.println("3- Agenda");
 		System.out.println("0- Salir");
 	
 	}
@@ -44,9 +45,9 @@ public class InmobiliariaMartinez {
 			  mc.procesarOpcion(submenu);
 			} while(submenu!=0);
 		  break;
-		case 2:
+		case 2: //Inmuebles();
 			 break;
-		case 3:
+		case 3: //Agenda();
 			break;
 		default: System.out.println("*Error* Ingrese una opcion valida");
 		}
