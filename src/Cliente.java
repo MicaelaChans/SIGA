@@ -1,5 +1,5 @@
 
-	public abstract class Clientes{
+	public abstract class Cliente{
 		private String nombre;
 		private String apellido;
 		private int documento;
@@ -8,7 +8,7 @@
 		private String tipo;
 		private int id;
 		
-		public Clientes(int id, int documento, String nombre, String apellido, char correo, int telefono, String tipo) {
+		public Cliente(int id, int documento, String nombre, String apellido, char correo, int telefono, String tipo) {
 			setNombre(nombre);
 			setApellido(apellido);
 			setDocumento(documento);

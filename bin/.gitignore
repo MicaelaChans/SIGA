@@ -1,2 +1,9 @@
-/Clientes.class
-/Inmuebles.class
+/Agenda.class
+/BDAgenda.class
+/Cliente.class
+/InmobiliariaMartinez.class
+/Inmueble.class
+/Inquilino.class
+/MantenimientoInmueble.class
+/MantenimientoInquilino.class
+/Utilidad.class
