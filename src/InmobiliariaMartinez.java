@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class InmobiliariaMartinez {
 	private static Utilidad util = new Utilidad();
-	public static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+	public static ArrayList<Inquilino> inquilino = new ArrayList<Inquilino>();
 	
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in); 
