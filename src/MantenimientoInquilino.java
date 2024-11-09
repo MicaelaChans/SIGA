@@ -28,7 +28,7 @@ public class MantenimientoInquilino extends Cliente {
 			break; 
 		case 4: listarInquilino();
 			break;
-		case 5: //buscarInquilino();
+		case 5: buscarInquilino();
 			break;
 		case 6: volverMenu();
 			break;
@@ -93,15 +93,20 @@ public class MantenimientoInquilino extends Cliente {
 		System.out.println("Hasta la proxima");
 	}
 	
-	public void listarInquilino () {
-		
-	}
 	
 	public void eliminarInquilino () {
 		
 	}
 	
 	public void modificarInquilino () {
+		
+	}
+	
+	public void listarInquilino () {
+		
+	}
+	
+	public void buscarInquilino() {
 		
 	}
 	

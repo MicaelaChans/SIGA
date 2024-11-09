@@ -5,6 +5,7 @@ public class InmobiliariaMartinez {
 	private static Utilidad util = new Utilidad();
 	public static ArrayList<Inquilino> inquilino = new ArrayList<Inquilino>();
 	public static ArrayList<Inmueble> inmueble = new ArrayList<Inmueble>();
+	public static ArrayList<Agenda> agenda = new ArrayList<Agenda>();
 
 	
 	public static void main(String[] args) {
@@ -39,17 +40,29 @@ public class InmobiliariaMartinez {
 		
 	public static void procesarOpcion(int opcion) {
 		switch(opcion){
-		/*case 1: MantenimientoInquilino mc = new MantenimientoInquilino();
+		case 1: MantenimientoInquilino mc = new MantenimientoInquilino();
 		  int submenu = 0;
 		  do {
 			  mc.mostrarMenu();
 			  submenu = util.leerOpcion();
 			  mc.procesarOpcion(submenu);
 			} while(submenu!=0);
-		  break;*/
-		case 2: //Inmuebles();
+		  break;
+		case 2: MantenimientoInmueble mp = new MantenimientoInmueble();
+		  int submenu1 = 0;
+		  do {
+			  mp.mostrarMenu();
+			  submenu1 = util.leerOpcion();
+			  mp.procesarOpcion(submenu1);
+			} while(submenu1!=0);
 			 break;
-		case 3: //Agenda();
+		case 3: BDAgenda ag = new BDAgenda();
+		  int submenu2 = 0;
+		  do {
+			  ag.mostrarMenu();
+			  submenu1 = util.leerOpcion();
+			  ag.procesarOpcion(submenu2);
+			} while(submenu2!=0);
 			break;
 		default: System.out.println("*Error* Ingrese una opcion valida");
 		}

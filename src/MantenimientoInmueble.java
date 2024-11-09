@@ -27,7 +27,7 @@ private static Utilidad util = new Utilidad();
 			break; 
 		case 4: listarInmueble();
 			break;
-		case 5: //buscarInmueble();
+		case 5: buscarInmueble();
 			break;
 		case 6: volverMenu();
 			break;
@@ -101,6 +101,10 @@ private static Utilidad util = new Utilidad();
 	}
 	
 	public void modificarInmueble () {
+		
+	}
+	
+	public void buscarInmueble() {
 		
 	}
 	
