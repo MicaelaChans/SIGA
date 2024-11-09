@@ -22,15 +22,15 @@ public class MantenimientoInquilino {
 		switch(opcion) {
 		case 1: crearInquilino();
 			break;
-		case 2: //eliminarCliente();
+		case 2: eliminarInquilino();
 			break;
-		case 3: //modificarCliente();
+		case 3:  modificarInquilino();
 			break; 
-		case 4: //listarClente();
+		case 4: listarInquilino();
 			break;
-		case 5: //buscarCliente();
+		case 5: //buscarInquilino();
 			break;
-		case 6: //volverMenu();
+		case 6: volverMenu();
 			break;
 		case 0: salir();
 			default: System.out.println("Error, ingrese una opcion valida");
@@ -93,4 +93,19 @@ public class MantenimientoInquilino {
 		System.out.println("Hasta la proxima");
 	}
 	
+	public void listarInquilino () {
+		
+	}
+	
+	public void eliminarInquilino () {
+		
+	}
+	
+	public void modificarInquilino () {
+		
+	}
+	
+	public void volverMenu () {
+		
+	}
 }

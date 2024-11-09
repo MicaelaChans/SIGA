@@ -1,7 +1,7 @@
 
 public abstract class Inmueble {
 	private int dormitorios;
-	private int baños;
+	private int banos;
 	private int cocheras;
 	private String estado;
 	private String nombre;
@@ -14,11 +14,11 @@ public abstract class Inmueble {
 	public void setDormitorios(int dormitorios) {
 		this.dormitorios = dormitorios;
 	}
-	public int getBaños() {
-		return baños;
+	public int getBanos() {
+		return banos;
 	}
-	public void setBaños(int baños) {
-		this.baños = baños;
+	public void setBanos(int banos) {
+		this.banos = banos;
 	}
 	public int getCocheras() {
 		return cocheras;
