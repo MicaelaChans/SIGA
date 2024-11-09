@@ -1,9 +1,9 @@
 
-public class MantenimientoInquilino {
+public class MantenimientoInquilino extends Cliente {
 	
-	/*public MantenimientoInquilino(int id, int documento, String nombre, String apellido, char correo, int telefono,
+	public MantenimientoInquilino(int id, int documento, String nombre, String apellido, char correo, int telefono,
 			String tipo) {
-		super(id, documento, nombre, apellido, correo, telefono, tipo);*/
+		super(id, documento, nombre, apellido, correo, telefono, tipo); }
 
 	private static Utilidad util = new Utilidad();
 	
@@ -40,7 +40,7 @@ public class MantenimientoInquilino {
 	
 	public void crearInquilino() {
 		int id = 0, documento= 0, telefono = 0;
-		String nombre = "", apellido = "", tipo = ""; 
+		String nombre = " ", apellido = " ", tipo = " "; 
 		char correo = ' ';
 		
 		id = util.leerCampoInt("id");
@@ -52,28 +52,28 @@ public class MantenimientoInquilino {
 		correo = util.leerCampoChar("correo");		
 		
 		
-		/*if (!existeId(id)) {
+		if (!existeId(id)) {
 			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo, correo);
 			InmobiliariaMartinez.inquilino.add(iq);
-		}else {
+		} else {
 			System.out.println("Error! Id Existe");
-		}*/
+		}
 	}
 	
 	public void buscardocumento() {
 		int documento = 0;
 		documento = util.leerCampoInt("documento");
-		buscarPordocumento(documento);					
+		buscarPorDocumento(documento);					
 	}
 	
-	public void buscarPordocumento(int documento) {
-		for (int i=0; i<InmobiliariaMartinez.inquilino.size(); i++) {
-			Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
-			int doc = tmp.getDocumento();
-			/*if(doc.Integer.valueOf(documento));
-				System.out.println(tmp);*/
-		}
-		
+	public void buscarPorDocumento(int documento) {
+	    for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
+	        Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
+	        int doc = tmp.getDocumento();
+	        if (doc == documento) {
+	            System.out.println(tmp);
+	        }
+	    }
 	}
 	
 	public boolean existeId(int id) {
@@ -84,7 +84,7 @@ public class MantenimientoInquilino {
 			Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
 			if (tmp.getId()==id) {
 				existe=true;
-			}i ++;
+			} i ++;
 		}
 		return existe;	
 	}	

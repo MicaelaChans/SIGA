@@ -4,9 +4,19 @@ public abstract class Inmueble {
 	private int banos;
 	private int cocheras;
 	private String estado;
-	private String nombre;
+	private String direccion;
 	private float precio;
+	private int id;
 	
+	public Inmueble(int id, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
+		setId(id);
+		setDormitorios(dormitorios);
+		setBanos(banos);
+		setCocheras(cocheras);
+		setEstado(estado);
+		setDireccion(direccion);
+		setPrecio(precio);
+	}
 	
 	public int getDormitorios() {
 		return dormitorios;
@@ -38,12 +48,28 @@ public abstract class Inmueble {
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
-	public String getNombre() {
-		return nombre;
+	public String getDireccion() {
+		return direccion;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	
-
+	public String toString() {
+		return "Dormitorios: " + getDormitorios() + 
+				" Baños: " + getBanos() + 
+				" Cocheras: " + getCocheras() + 
+				" Estado: " + getEstado() +
+				" Dirección: " + getDireccion() +
+				" Precio: " + getPrecio() +
+				" Id: " + getId();
+	}
+	
 }

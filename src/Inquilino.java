@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Inquilino extends Cliente {
-   public Inquilino(String nombre, String apellido, int documento, char correo, int telefono, String tipo, int id) {
+   public Inquilino(int id, int documento, int telefono, String nombre, String apellido, String tipo, char correo) {
 	super(id, documento, nombre, apellido, correo, telefono, tipo);
    }
 
 public void Inquilinos() {
 	Scanner teclado = new Scanner(System.in);
-	System.out.println("Usted ingrese al menu Inquilino");		
+	System.out.println("Usted ingreso al menu Inquilino");		
 	int inquilinos = teclado.nextInt();
 }
 

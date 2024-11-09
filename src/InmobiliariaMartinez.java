@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class InmobiliariaMartinez {
 	private static Utilidad util = new Utilidad();
 	public static ArrayList<Inquilino> inquilino = new ArrayList<Inquilino>();
+	public static ArrayList<Inmueble> inmueble = new ArrayList<Inmueble>();
+
 	
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in); 
@@ -37,14 +39,14 @@ public class InmobiliariaMartinez {
 		
 	public static void procesarOpcion(int opcion) {
 		switch(opcion){
-		case 1: MantenimientoInquilino mc = new MantenimientoInquilino();
+		/*case 1: MantenimientoInquilino mc = new MantenimientoInquilino();
 		  int submenu = 0;
 		  do {
 			  mc.mostrarMenu();
 			  submenu = util.leerOpcion();
 			  mc.procesarOpcion(submenu);
 			} while(submenu!=0);
-		  break;
+		  break;*/
 		case 2: //Inmuebles();
 			 break;
 		case 3: //Agenda();
