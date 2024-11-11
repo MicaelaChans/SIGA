@@ -11,7 +11,7 @@ public class InmobiliariaMartinez {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in); 
 		System.out.println("Bienvenidos a S.I.G.A.");
-		System.out.println("Sistemas Inmobiliarios de Gestión Automática.");	
+		System.out.println("Sistemas Inmobiliarios de Gestionn Automatica.");	
 		
 		int opcion = 0;
 		do {
@@ -64,7 +64,9 @@ public class InmobiliariaMartinez {
 			  ag.procesarOpcion(submenu2);
 			} while(submenu2!=0);
 			break;
+		case 0: salir();
+		break;
 		default: System.out.println("*Error* Ingrese una opcion valida");
 		}
 	}		
-	}
+}

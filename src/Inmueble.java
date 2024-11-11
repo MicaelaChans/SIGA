@@ -1,5 +1,5 @@
 
-public abstract class Inmueble {
+public class Inmueble {
 	private int dormitorios;
 	private int banos;
 	private int cocheras;

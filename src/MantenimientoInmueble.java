@@ -92,9 +92,6 @@ private static Utilidad util = new Utilidad();
 		System.out.println("Hasta la proxima");
 	}
 	
-	public void listarInmueble () {
-		
-	}
 	
 	public void eliminarInmueble() {
 		
@@ -104,12 +101,29 @@ private static Utilidad util = new Utilidad();
 		
 	}
 	
+	public void listarInmueble () {
+		System.out.println(
+				"Dormitorios: " + getDormitorios() + 
+				" Baños: " + getBanos() + 
+				" Cocheras: " + getCocheras() + 
+				" Estado: " + getEstado() +
+				" Dirección: " + getDireccion() +
+				" Precio: " + getPrecio() +
+				" Id: " + getId());
+	}
+	
 	public void buscarInmueble() {
-		
+		buscarPorDireccion(getDireccion());
 	}
 	
 	public void volverMenu () {
-		
+		 int opcion = 0;
+	        do {
+	            volverMenu();
+	            opcion = util.leerOpcion();
+	            procesarOpcion(opcion);
+
+	        }while(opcion!=0);
 	}
 
 }

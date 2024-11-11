@@ -103,14 +103,27 @@ public class MantenimientoInquilino extends Cliente {
 	}
 	
 	public void listarInquilino () {
-		
+		System.out.println(
+		" Nombre: " + getNombre() + 
+		" Apellido: " + getApellido() + 
+		" Documento: " + getDocumento() + 
+		" Correo: " + getCorreo() +
+		" Telefono: " + getTelefono() +
+		" Tipo: " + getTipo() +
+		" Id: " + getId() );
 	}
 	
 	public void buscarInquilino() {
-		
+		buscarPorDocumento(getDocumento());
 	}
 	
 	public void volverMenu () {
-		
+		 int opcion = 0;
+	        do {
+	            volverMenu();
+	            opcion = util.leerOpcion();
+	            procesarOpcion(opcion);
+
+	        }while(opcion!=0);
 	}
 }
