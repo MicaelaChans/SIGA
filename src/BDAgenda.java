@@ -70,7 +70,7 @@ public class BDAgenda {
 		String nombres [] = {"Amelia", "Sopia", "Diego", "Cristian", "Fernando", "Valentina", "Mateo", "Carlos", "Andres", 
 				"Julieta", "Daniela", "Pia", "Marcelo", "Esteban", "Nicolas"};
 		
-		String apellidos [] = {"Gonzalez", "Lopez", "Gomez", "De la cruz", "Suarez", "Pacheco", "Storianof", "Valverde", 
+		String apellidos [] = {"Gonzalez", "Lopez", "Gomez", "De la cruz", "Suarez", "Pacheco", "Estoyanoff", "Valverde", 
 				"Vecino", "Ugarte", "Cavani", "Perez", "Pereira", "Rodriguez", "Novik"};
 		
 		String calles [] = {"Domingo Arambru", "Colonia", "8 de octubre", "18 de julio", "Av.Italia", "Av.Bulevar Artigas",
@@ -85,8 +85,8 @@ public class BDAgenda {
 			ap = r.nextInt(apellidos.length);
 			tel = r.nextInt(222222222) + 1;
 			nombreCompleto = nombres[nom] + " " + apellidos[ap];
-			Inquilino tmp = new Inquilino(i, String.valueOf(doc), nombreCompleto, tel);
-			InmobiliariaMartinez.inquilino.add(tmp);	
+			//Inquilino tmp = new Inquilino(i, String.valueOf(doc), nombreCompleto, tel);
+			//InmobiliariaMartinez.inquilino.add(tmp);	
 		}
 		
 		for (; i<= 20; i++) {
@@ -98,8 +98,8 @@ public class BDAgenda {
 			direccion = calles[calle] + " " + puerta;
 			est = r.nextInt(estado.length);
 			pre = r.nextInt(150000) + 1;
-			Inmueble tmp = new Inmueble(i, dor, ban, coc, est, direccion);
-			InmobiliariaMartinez.inmueble.add(tmp);	
+			//Inmueble tmp = new Inmueble(i, dor, ban, coc, est, direccion);
+			//InmobiliariaMartinez.inmueble.add(tmp);	
 		}
 	}
 	
@@ -110,9 +110,9 @@ public class BDAgenda {
 		
 		int buscar = 0;
 		if (buscar == 1) {
-			buscarPorDocumento(getDocumento());
+			//buscarPorDocumento(getDocumento());
 		} else if (buscar == 2){
-			buscarPorDireccion(getDireccion());
+			//buscarPorDireccion(getDireccion());
 		}
 	}
 	

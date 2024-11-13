@@ -55,24 +55,8 @@ private static Utilidad util = new Utilidad();
 		} else {
 			System.out.println("Error! Id Existe");
 		}
-	}
-	
-	public void buscarDireccion() {
-		String direccion = " ";
-		direccion = util.leerCampoStr("direccion");
-		buscarPorDireccion(direccion);					
-	}
-	
-	public void buscarPorDireccion(String direccion) {
-	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
-	        Inmueble tmp = InmobiliariaMartinez.inmueble.get(i);
-	        String dir = tmp.getDireccion();
-	        if (dir == direccion) {
-	            System.out.println(tmp);
-	        }
-	    }
-	}
-	
+	} 
+	    
 	public boolean existeId(int id) {
 		int i = 0;
 		boolean existe = false;
@@ -107,9 +91,20 @@ private static Utilidad util = new Utilidad();
 	}
 	
 	public void buscarInmueble() {
-		buscarPorDireccion(getDireccion());
+		String direccion = " ";
+		direccion = util.leerCampoStr("direccion");
+		buscarPorDireccion(direccion);					
 	}
 	
+	public void buscarPorDireccion(String direccion) {
+	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
+	        Inmueble tmp = InmobiliariaMartinez.inmueble.get(i);
+	        String dir = tmp.getDireccion();
+	        if (dir.contains(direccion)) {
+	            System.out.println(tmp);
+	        }
+	    }
+	}
 	public void volverMenu () {
 		 int opcion = 0;
 	        do {

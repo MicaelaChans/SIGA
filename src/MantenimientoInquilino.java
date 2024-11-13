@@ -37,19 +37,17 @@ public class MantenimientoInquilino {
 	public void crearInquilino() {
 		int id = 0, documento= 0, telefono = 0;
 		String nombre = " ", apellido = " ", tipo = " "; 
-		char correo = ' ';
 		
 		id = util.leerCampoInt("id");
 		documento = util.leerCampoInt("documento");
 		telefono = util.leerCampoInt("telefono");
 		nombre = util.leerCampoStr("nombre");
 		apellido = util.leerCampoStr("apellido");
-		tipo = util.leerCampoStr("tipo");
-		correo = util.leerCampoChar("correo");		
+		tipo = util.leerCampoStr("tipo");	
 		
 		
 		if (!existeId(id)) {
-			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo, correo);
+			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo);
 			InmobiliariaMartinez.inquilino.add(iq);
 		} else {
 			System.out.println("Error! Id Existe");
@@ -123,11 +121,11 @@ public class MantenimientoInquilino {
 	}
 	public void volverMenu () {
 		 int opcion = 0;
-	        do {
-	            volverMenu();
+	        do {	
+	        	volverMenu();           
 	            opcion = util.leerOpcion();
 	            procesarOpcion(opcion);
-
+	            
 	        }while(opcion!=0);
 	}
 }
