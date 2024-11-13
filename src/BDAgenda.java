@@ -110,9 +110,9 @@ public class BDAgenda {
 		
 		int buscar = 0;
 		if (buscar == 1) {
-			//buscarPorDocumento(getDocumento());
+			//buscarPorDocumento();
 		} else if (buscar == 2){
-			//buscarPorDireccion(getDireccion());
+			//buscarPorDireccion();
 		}
 	}
 	

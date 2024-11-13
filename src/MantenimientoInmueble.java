@@ -106,13 +106,7 @@ private static Utilidad util = new Utilidad();
 	    }
 	}
 	public void volverMenu () {
-		 int opcion = 0;
-	        do {
-	            volverMenu();
-	            opcion = util.leerOpcion();
-	            procesarOpcion(opcion);
-
-	        }while(opcion!=0);
+	    System.out.println("Volviendo al menú principal...");
 	}
 
 }

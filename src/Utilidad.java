@@ -31,12 +31,6 @@ public class Utilidad {
 		return opcion;
 	}
 	
-	public char leerCampoChar(String campo) {
-		char opcion = ' ';
-		System.out.print("ingrese " + campo);
-		return opcion;
-	}
-	
 	public float leerCampoFloat(String campo) {
 		float opcion = ' ';
 		System.out.print("ingrese " + campo);

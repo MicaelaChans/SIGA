@@ -3,7 +3,7 @@ public class MantenimientoInquilino {
 	
 	private static Utilidad util = new Utilidad();
 	
-	public void mostrarMenu() {
+	public static void mostrarMenu() {
 		System.out.println("Usted Ingreso al Menu de Clientes");
 		System.out.println("1- Agregar");
 		System.out.println("2- Eliminar");
@@ -29,9 +29,14 @@ public class MantenimientoInquilino {
 		case 6: volverMenu();
 			break;
 		case 0: salir();
+		break;
 			default: System.out.println("Error, ingrese una opcion valida");
 		}
 		
+	}
+	
+	public static void salir() {
+		System.out.println("no vimo");
 	}
 	
 	public void crearInquilino() {
@@ -83,11 +88,6 @@ public class MantenimientoInquilino {
 		return existe;	
 	}	
 	
-	public static void salir() {
-		System.out.println("Hasta la proxima");
-	}
-	
-	
 	public void eliminarInquilino () {
 		
 	}
@@ -97,35 +97,21 @@ public class MantenimientoInquilino {
 	}
 	
 	public void listarInquilino () {
-		for (int i=0; i< InmobiliariaMartinez.inquilino.size(); i++){
+		for (int i=0; i< InmobiliariaMartinez.inquilino.size(); i++) {
 			Inquilino iq = InmobiliariaMartinez.inquilino.get(i);
 			System.out.println(iq);
 		}
-		
 	}
 	
 	public void buscarInquilino() {
-		String documento = "";
-		documento = util.leerCampoStr("documento");
+		int documento = 0;
+		documento = util.leerCampoInt("documento");
 		buscarPorDocumento(documento);
 	}
+
 	
-	public void buscarPorDocumento(String documento) {
-		for (int i=0; i< InmobiliariaMartinez.inquilino.size(); i++){
-			Inquilino tmp = InmobiliariaMartinez.inquilino.get(i);
-			int doc = tmp.getDocumento();
-			if (doc==0) {
-				System.out.println(tmp);
-			}
-		}
-	}
 	public void volverMenu () {
-		 int opcion = 0;
-	        do {	
-	        	volverMenu();           
-	            opcion = util.leerOpcion();
-	            procesarOpcion(opcion);
-	            
-	        }while(opcion!=0);
-	}
+		System.out.println("Volviendo al menú principal...");
+	    InmobiliariaMartinez.imprimirMenu();
+	} 
 }

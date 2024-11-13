@@ -3,7 +3,6 @@ public abstract class Agenda {
 	private String nombre;
 	private String apellido;
 	private int documento;
-	private char correo;
 	private int telefono;
 	private String tipo;
 	private int id;
@@ -14,11 +13,10 @@ public abstract class Agenda {
 	private String direccion;
 	private float precio;
 	
-	public Agenda(int id, int documento, String nombre, String apellido, char correo, int telefono, String tipo, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
+	public Agenda(int id, int documento, String nombre, String apellido, int telefono, String tipo, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
 		setNombre(nombre);
 		setApellido(apellido);
 		setDocumento(documento);
-		setCorreo(correo);
 		setTelefono(telefono);
 		setTipo(tipo);
 		setId(id);
@@ -47,12 +45,6 @@ public abstract class Agenda {
 	}
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
-	}
-	public char getCorreo() {
-		return correo;
-	}
-	public void setCorreo(char correo) {
-		this.correo = correo;
 	}
 	public String getApellido() {
 		return apellido;
@@ -117,7 +109,6 @@ public abstract class Agenda {
 		return "Nombre: " + getNombre() + 
 				" Apellido: " + getApellido() + 
 				" Documento: " + getDocumento() + 
-				" Correo: " + getCorreo() +
 				" Telefono: " + getTelefono() +
 				" Tipo: " + getTipo() +
 				" Id: " + getId() +

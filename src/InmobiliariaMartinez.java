@@ -19,9 +19,12 @@ public class InmobiliariaMartinez {
 			opcion = util.leerOpcion();
 			procesarOpcion(opcion);
 			
-		}while(opcion!=0);
-		
-		salir();
+		}while(opcion!= 0);
+		teclado.close();
+	}
+	
+	public static void salir() {
+		System.out.println("Chau");
 	}
 	
 	public static void imprimirMenu() {
@@ -33,13 +36,9 @@ public class InmobiliariaMartinez {
 		System.out.println("0- Salir");
 	
 	}
-	
-	public static void salir() {
-		System.out.println("Hasta la proxima");
-	}
 		
-	public static void procesarOpcion(int opcion) {
-		switch(opcion){
+	public static void procesarOpcion(int opcion1) {
+		switch(opcion1){
 		case 1: MantenimientoInquilino mc = new MantenimientoInquilino();
 		  int submenu = 0;
 		  do {
@@ -48,13 +47,15 @@ public class InmobiliariaMartinez {
 			  mc.procesarOpcion(submenu);
 			} while(submenu!=0);
 		  break;
-		case 2: MantenimientoInmueble mp = new MantenimientoInmueble();
-		  int submenu1 = 0;
-		  do {
-			  mp.mostrarMenu();
-			  submenu1 = util.leerOpcion();
-			  mp.procesarOpcion(submenu1);
-			} while(submenu1!=0);
+		case 2:  MantenimientoInmueble mp = new MantenimientoInmueble();
+        int submenu1 = 0;
+        do {
+            mp.mostrarMenu();
+            submenu1 = util.leerOpcion();  
+            if (submenu1 != 6) { 
+                mp.procesarOpcion(submenu1);
+            }
+        } while (submenu1 != 6 && submenu1 != 0);
 			 break;
 		case 3: BDAgenda ag = new BDAgenda();
 		  int submenu2 = 0;
@@ -64,9 +65,10 @@ public class InmobiliariaMartinez {
 			  ag.procesarOpcion(submenu2);
 			} while(submenu2!=0);
 			break;
-		case 0: salir();
+		case 0: salir(); 
 		break;
 		default: System.out.println("*Error* Ingrese una opcion valida");
+		break;
 		}
 	}		
 }
