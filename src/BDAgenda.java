@@ -1,9 +1,6 @@
 import java.util.Random;
 
-public class BDAgenda extends Agenda {
-	
-	public BDAgenda (int id, int documento, String nombre, String apellido, char correo, int telefono, String tipo, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
-		super(id, documento, nombre, apellido, correo, telefono, tipo, dormitorios, banos, cocheras, estado, direccion, precio); }
+public class BDAgenda {	
 
 	private static Utilidad util = new Utilidad();
 	

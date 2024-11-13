@@ -1,10 +1,6 @@
 
-public class MantenimientoInquilino extends Cliente {
+public class MantenimientoInquilino {
 	
-	public MantenimientoInquilino(int id, int documento, String nombre, String apellido, char correo, int telefono,
-			String tipo) {
-		super(id, documento, nombre, apellido, correo, telefono, tipo); }
-
 	private static Utilidad util = new Utilidad();
 	
 	public void mostrarMenu() {
@@ -103,20 +99,28 @@ public class MantenimientoInquilino extends Cliente {
 	}
 	
 	public void listarInquilino () {
-		System.out.println(
-		" Nombre: " + getNombre() + 
-		" Apellido: " + getApellido() + 
-		" Documento: " + getDocumento() + 
-		" Correo: " + getCorreo() +
-		" Telefono: " + getTelefono() +
-		" Tipo: " + getTipo() +
-		" Id: " + getId() );
+		for (int i=0; i< InmobiliariaMartinez.inquilino.size(); i++){
+			Inquilino iq = InmobiliariaMartinez.inquilino.get(i);
+			System.out.println(iq);
+		}
+		
 	}
 	
 	public void buscarInquilino() {
-		buscarPorDocumento(getDocumento());
+		String documento = "";
+		documento = util.leerCampoStr("documento");
+		buscarPorDocumento(documento);
 	}
 	
+	public void buscarPorDocumento(String documento) {
+		for (int i=0; i< InmobiliariaMartinez.inquilino.size(); i++){
+			Inquilino tmp = InmobiliariaMartinez.inquilino.get(i);
+			int doc = tmp.getDocumento();
+			if (doc==0) {
+				System.out.println(tmp);
+			}
+		}
+	}
 	public void volverMenu () {
 		 int opcion = 0;
 	        do {

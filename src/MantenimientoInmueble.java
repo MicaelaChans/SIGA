@@ -1,8 +1,6 @@
 
-public class MantenimientoInmueble extends Inmueble {
-	
-	public MantenimientoInmueble(int id, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
-		super(id, dormitorios, banos, cocheras, estado, direccion, precio); }
+public class MantenimientoInmueble  {
+
 	
 private static Utilidad util = new Utilidad();
 	
@@ -44,7 +42,7 @@ private static Utilidad util = new Utilidad();
 		
 		id = util.leerCampoInt("id");
 		dormitorios = util.leerCampoInt("dormitorios");
-		banos = util.leerCampoInt("baños");
+		banos = util.leerCampoInt("baï¿½os");
 		cocheras = util.leerCampoInt("cocheras");
 		estado = util.leerCampoStr("estado");
 		direccion = util.leerCampoStr("direccion");
@@ -102,14 +100,10 @@ private static Utilidad util = new Utilidad();
 	}
 	
 	public void listarInmueble () {
-		System.out.println(
-				"Dormitorios: " + getDormitorios() + 
-				" Baños: " + getBanos() + 
-				" Cocheras: " + getCocheras() + 
-				" Estado: " + getEstado() +
-				" Dirección: " + getDireccion() +
-				" Precio: " + getPrecio() +
-				" Id: " + getId());
+		for (int i=0; i< InmobiliariaMartinez.inmueble.size(); i++){
+			Inmueble inm = InmobiliariaMartinez.inmueble.get(i);
+			System.out.println(inm);
+		}
 	}
 	
 	public void buscarInmueble() {
