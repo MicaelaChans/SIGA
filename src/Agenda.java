@@ -106,18 +106,18 @@ public abstract class Agenda {
 	
 	
 	public String toString() {
-		return "Nombre: " + getNombre() + 
-				" Apellido: " + getApellido() + 
-				" Documento: " + getDocumento() + 
-				" Telefono: " + getTelefono() +
-				" Tipo: " + getTipo() +
-				" Id: " + getId() +
-				" Dormitorios: " + getDormitorios() + 
-				" Baños: " + getBanos() + 
-				" Cocheras: " + getCocheras() + 
-				" Estado: " + getEstado() +
-				" Dirección: " + getDireccion() +
-				" Precio: " + getPrecio() ;
+		return "Nombre: " + getNombre() + ", " +
+				" Apellido: " + getApellido() + ", " +
+				" Documento: " + getDocumento() + ", " +
+				" Telefono: " + getTelefono() + ", " +
+				" Tipo: " + getTipo() + ", " +
+				" Id: " + getId() + ", " +
+				" Dormitorios: " + getDormitorios() + ", " +
+				" Baños: " + getBanos() + ", " +
+				" Cocheras: " + getCocheras() + ", " +
+				" Estado: " + getEstado() + ", " +
+				" Dirección: " + getDireccion() + ", " +
+				" Precio: " + getPrecio() + ", " ;
 	}
 
 }

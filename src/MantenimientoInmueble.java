@@ -79,11 +79,36 @@ private static Utilidad util = new Utilidad();
 	
 	
 	public void eliminarInmueble() {
-		
+		int id = util.leerCampoInt("id del inmueble a eliminar");
+	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
+	        Inmueble inmueble = InmobiliariaMartinez.inmueble.get(i);
+	        if (inmueble.getId() == id) {
+	            InmobiliariaMartinez.inmueble.remove(i);
+	            System.out.println("Inmueble eliminado.");
+	            return;
+	        }
+	    }
+	    System.out.println("No se encontró el inmueble con ID " + id);
 	}
 	
 	public void modificarInmueble () {
-		
+		int id = util.leerCampoInt("id del inmueble a modificar");
+	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
+	        Inmueble inmueble = InmobiliariaMartinez.inmueble.get(i);
+	        if (inmueble.getId() == id) {
+	            int dormitorio = util.leerCampoInt("nuevos dormitorios");
+	            int banos = util.leerCampoInt("nuevos banos");
+	            int cochera = util.leerCampoInt("nuevas cocheras");
+	            String estado = util.leerCampoStr("nuevo estado");
+	            inmueble.setDormitorios(dormitorio);
+	            inmueble.setBanos(banos);
+	            inmueble.setCocheras(cochera);
+	            inmueble.setEstado(estado);
+	            System.out.println("Inmueble modificado.");
+	            return;
+	        }
+	    }
+	    System.out.println("No se encontró el inmueble con ID " + id);
 	}
 	
 	public void listarInmueble () {
@@ -112,5 +137,4 @@ private static Utilidad util = new Utilidad();
 		    System.out.println("Volviendo al menÃº principal...");
 		
 	}
-
 }

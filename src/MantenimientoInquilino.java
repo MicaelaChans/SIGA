@@ -90,11 +90,34 @@ public class MantenimientoInquilino {
 	
 	
 	public void eliminarInquilino () {
-		
+		 int id = util.leerCampoInt("id del inquilino a eliminar");
+		    for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
+		        Inquilino inquilino = InmobiliariaMartinez.inquilino.get(i);
+		        if (inquilino.getId() == id) {
+		            InmobiliariaMartinez.inquilino.remove(i);
+		            System.out.println("Inquilino eliminado.");
+		            return;
+		        }
+		    }
+		    System.out.println("No se encontró el inquilino con ID " + id);
 	}
 	
-	public void modificarInquilino () {
-		
+	public void modificarInquilino() {
+	    int id = util.leerCampoInt("id del inquilino a modificar");
+	    for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
+	        Inquilino inquilino = InmobiliariaMartinez.inquilino.get(i);
+	        if (inquilino.getId() == id) {
+	            String nombre = util.leerCampoStr("nuevo nombre");
+	            String apellido = util.leerCampoStr("nuevo apellido");
+	            int telefono = util.leerCampoInt("nuevo teléfono");
+	            inquilino.setNombre(nombre);
+	            inquilino.setApellido(apellido);
+	            inquilino.setTelefono(telefono);
+	            System.out.println("Inquilino modificado.");
+	            return;
+	        }
+	    }
+	    System.out.println("No se encontró el inquilino con ID " + id);
 	}
 	
 	public void listarInquilino () {
@@ -116,8 +139,9 @@ public class MantenimientoInquilino {
 			Inquilino tmp = InmobiliariaMartinez.inquilino.get(i);
 			int doc = tmp.getDocumento();
 			if (doc==0) {
-				System.out.println(tmp);
+				System.out.println(tmp);	
 			}
+			System.out.println("Cliente encontrado: " + tmp);
 		}
 	}
 	public void volverMenu() {

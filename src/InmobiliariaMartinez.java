@@ -25,7 +25,7 @@ public class InmobiliariaMartinez {
 	}
 	
 	public static void imprimirMenu() {
-		System.out.println("Menu: ");			
+		System.out.println("Menu principal: ");			
 		System.out.println("Ingrese una opcion: ");
 		System.out.println("1- Clientes");
 		System.out.println("2- Inmuebles");
@@ -64,8 +64,6 @@ public class InmobiliariaMartinez {
 		    	} while(submenu1 != 6 && submenu1 !=0 );  
 		    	
 		    break;
-
-			
 		case 3: BDAgenda ag = new BDAgenda();
 		  int submenu2 = 0;
 		  do {
@@ -79,8 +77,6 @@ public class InmobiliariaMartinez {
 			break;
 		case 0:
 			salir();
-		
-			
 		break;
 		default: System.out.println("*Error* Ingrese una opcion valida");
 		}
