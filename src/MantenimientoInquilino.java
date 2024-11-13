@@ -29,6 +29,7 @@ public class MantenimientoInquilino {
 		case 6: volverMenu();
 			break;
 		case 0: salir();
+		
 			default: System.out.println("Error, ingrese una opcion valida");
 		}
 		
@@ -119,13 +120,13 @@ public class MantenimientoInquilino {
 			}
 		}
 	}
-	public void volverMenu () {
-		 int opcion = 0;
-	        do {	
-	        	volverMenu();           
-	            opcion = util.leerOpcion();
-	            procesarOpcion(opcion);
-	            
-	        }while(opcion!=0);
+	public void volverMenu() {
+	    int opcion = 0;
+	    do {	
+	        mostrarMenu();  
+	        opcion = util.leerOpcion();  
+	        procesarOpcion(opcion); 
+	    } while (opcion != 0);
 	}
+	
 }

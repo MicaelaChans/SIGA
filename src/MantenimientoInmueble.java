@@ -29,7 +29,10 @@ private static Utilidad util = new Utilidad();
 			break;
 		case 6: volverMenu();
 			break;
-		case 0: salir();
+		case 0: 
+			  salir();
+			
+		   
 			default: System.out.println("Error, ingrese una opcion valida");
 		}
 		
@@ -42,7 +45,7 @@ private static Utilidad util = new Utilidad();
 		
 		id = util.leerCampoInt("id");
 		dormitorios = util.leerCampoInt("dormitorios");
-		banos = util.leerCampoInt("ba�os");
+		banos = util.leerCampoInt("banos");
 		cocheras = util.leerCampoInt("cocheras");
 		estado = util.leerCampoStr("estado");
 		direccion = util.leerCampoStr("direccion");
@@ -106,13 +109,8 @@ private static Utilidad util = new Utilidad();
 	    }
 	}
 	public void volverMenu () {
-		 int opcion = 0;
-	        do {
-	            volverMenu();
-	            opcion = util.leerOpcion();
-	            procesarOpcion(opcion);
-
-	        }while(opcion!=0);
+		    System.out.println("Volviendo al menú principal...");
+		
 	}
 
 }

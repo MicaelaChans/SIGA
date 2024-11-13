@@ -12,35 +12,45 @@ public class BDAgenda {
 		System.out.println("0- Salir");
 	}
 	
-	public void procesarOpcion(int opcion) {		
-		switch(opcion) {
-		case 1: cargarBD();
-			break;
-		case 2: buscarAgenda();
-			break;
-		case 3: volverMenu();
-			break;
-		case 0: salir();
-			default: System.out.println("Error, ingrese una opcion valida");
+	public void procesarOpcion(int opcion) {		       
+		        switch(opcion) {
+		        case 1: 
+		            cargarBD();
+		            break;
+		        case 2: 
+		            buscardocumento();
+		            break;
+		        case 3: 
+		            buscardocumento();
+		            break;
+		        case 0: 
+		            salir();
+		            break;
+		        default: 
+		            System.out.println("Error, ingrese una opcion valida");
 		}
 		
 	}
 	
 	public void buscardocumento() {
-		int documento = 0;
-		documento = util.leerCampoInt("documento");
-		buscarPorDocumento(documento);					
+		
+  int documento = util.leerCampoInt("Ingrese el número de documento del cliente");
+	 buscarPorDocumento(documento); 
+	 
 	}
+		  public void buscarPorDocumento(int documento) {
+		        // Suponiendo que 'InmobiliariaMartinez.inquilino' es una lista de clientes
+		        for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
+		            Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
+		            int doc = tmp.getDocumento();
+		            if (doc == documento) {
+		                System.out.println("Cliente encontrado: " + tmp);
+		                return;
+		            }
+		        }
+		        System.out.println("Cliente no encontrado con el documento " + documento);
+		    }
 	
-	public void buscarPorDocumento(int documento) {
-	    for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
-	        Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
-	        int doc = tmp.getDocumento();
-	        if (doc == documento) {
-	            System.out.println(tmp);
-	        }
-	    }
-	}
 	
 	public void buscarDireccion() {
 		String direccion = " ";
@@ -61,9 +71,20 @@ public class BDAgenda {
 	public static void salir() {
 		System.out.println("Hasta la proxima");
 	}
-	
+	  /*public void buscarAgenda() {    
+	        System.out.println("Ingrese 1 para buscar por documento (Cliente)");
+	        System.out.println("Ingrese 2 para buscar por direccion (Inmueble)");
+	        
+	        int buscar = util.leerOpcion();
+	        
+	        if (buscar == 1) {
+	            buscardocumento();  // Llamamos directamente a la búsqueda por documento
+	        } else if (buscar == 2){
+	            buscardocumento();  // Esta opción podrías agregarla si también necesitas buscar por dirección
+	        }
+	    }*/
 	public void cargarBD() {
-		int nom =0, ap =0, doc =0, tel = 0, dor =0, ban =0, coc =0, dic =0, est =0, pre = 0, calle =0, puerta =0;
+		int nom =0, ap =0, doc =0, tel = 0, dor =0, ban =0, coc =0, dir =0, est =0, pre = 0, calle =0, puerta =0;
 		Random r = new Random();
 		String direccion = " ";
 		String nombreCompleto = " ";
@@ -98,32 +119,26 @@ public class BDAgenda {
 			direccion = calles[calle] + " " + puerta;
 			est = r.nextInt(estado.length);
 			pre = r.nextInt(150000) + 1;
-			//Inmueble tmp = new Inmueble(i, dor, ban, coc, est, direccion);
-			//InmobiliariaMartinez.inmueble.add(tmp);	
+			/*Inmueble tmp = new Inmueble(dor, ban, coc, est, direccion, pre, i );
+			InmobiliariaMartinez.inmueble.add(tmp);	*/
 		}
 	}
 	
-	public void buscarAgenda() {	
-		
-		System.out.println("Ingrese 1 para buscar por documento (Cliente)");
-		System.out.println("Ingrese 2 para buscar por direccion (Inmueble)");
-		
-		int buscar = 0;
-		if (buscar == 1) {
-			//buscarPorDocumento(getDocumento());
-		} else if (buscar == 2){
-			//buscarPorDireccion(getDireccion());
-		}
-	}
 	
 	public void volverMenu () {
-		 int opcion = 0;
-	        do {
-	            volverMenu();
-	            opcion = util.leerOpcion();
-	            procesarOpcion(opcion);
+		  int submenu1 = 0;
+	     InmobiliariaMartinez volver = new InmobiliariaMartinez();
+	    	do {
+	    	    volver.imprimirMenu();
+	    	    submenu1 = util.leerOpcion();  
+	    	    if (submenu1 != 6 && submenu1 != 0) {  
+	    	        volver.procesarOpcion(submenu1);
+	    	    }
+	    	} while(submenu1 != 6 && submenu1 !=0 );  
+	    	
+	    
 
-	        }while(opcion!=0);
 	}
 }
+	
 	

@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Utilidad {
 	private Scanner teclado = new Scanner(System.in);
+	 
+	
 	
 	private int leerNumero() {
 		int opcion = 0;
@@ -16,8 +18,15 @@ public class Utilidad {
 	}
 	
 	public int leerOpcion() {
-		return leerNumero();
-	}
+	 
+	       System.out.print("Ingrese una opción: ");
+	        int opcion = teclado.nextInt();
+	        if (opcion == 0) {
+	            System.out.println("Hasta la próxima");
+	            System.exit(0);
+	        }
+	        return opcion;
+	 }
 	
 	public int leerCampoInt(String campo) {
 		System.out.println("Ingrese " + campo);
