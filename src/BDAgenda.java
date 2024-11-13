@@ -21,7 +21,7 @@ public class BDAgenda {
 		            buscardocumento();
 		            break;
 		        case 3: 
-		            buscardocumento();
+		             volverMenu();
 		            break;
 		        case 0: 
 		            salir();
@@ -39,7 +39,7 @@ public class BDAgenda {
 	 
 	}
 		  public void buscarPorDocumento(int documento) {
-		        // Suponiendo que 'InmobiliariaMartinez.inquilino' es una lista de clientes
+		      
 		        for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
 		            Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
 		            int doc = tmp.getDocumento();
@@ -62,7 +62,7 @@ public class BDAgenda {
 	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
 	        Inmueble tmp = InmobiliariaMartinez.inmueble.get(i);
 	        String dir = tmp.getDireccion();
-	        if (dir == direccion) {
+	        if (dir.equals(direccion)) {
 	            System.out.println(tmp);
 	        }
 	    }
@@ -84,10 +84,13 @@ public class BDAgenda {
 	        }
 	    }*/
 	public void cargarBD() {
+		
+		MantenimientoInquilino listar = new MantenimientoInquilino();
+		listar.listarInquilino();
+		
 		int nom =0, ap =0, doc =0, tel = 0, dor =0, ban =0, coc =0, dir =0, est =0, pre = 0, calle =0, puerta =0;
 		Random r = new Random();
 		String direccion = " ";
-		String nombreCompleto = " ";
 		String nombres [] = {"Amelia", "Sopia", "Diego", "Cristian", "Fernando", "Valentina", "Mateo", "Carlos", "Andres", 
 				"Julieta", "Daniela", "Pia", "Marcelo", "Esteban", "Nicolas"};
 		
@@ -98,31 +101,44 @@ public class BDAgenda {
 				"Mercedes", "Av.Agraciada", "Cairo", "Capurro", "Ramon caceres", "Gral Flores", "Av.Millan", "Uruguayana", "Gaboto"};
 		
 		String estado [] = {"Disponible", "No disponible"};
-		int i = 1;
-		
-		for (; i<= 20; i++) {
-			doc = r.nextInt(3000000) + 1000000;
-			nom = r.nextInt(nombres.length);
-			ap = r.nextInt(apellidos.length);
-			tel = r.nextInt(222222222) + 1;
-			nombreCompleto = nombres[nom] + " " + apellidos[ap];
-			//Inquilino tmp = new Inquilino(i, String.valueOf(doc), nombreCompleto, tel);
-			//InmobiliariaMartinez.inquilino.add(tmp);	
-		}
-		
-		for (; i<= 20; i++) {
-			puerta = r.nextInt(9999) + 1;
-			calle = r.nextInt(calles.length);
-			dor = r.nextInt(4);
-			ban = r.nextInt(2);
-			coc = r.nextInt(1);
-			direccion = calles[calle] + " " + puerta;
-			est = r.nextInt(estado.length);
-			pre = r.nextInt(150000) + 1;
-			/*Inmueble tmp = new Inmueble(dor, ban, coc, est, direccion, pre, i );
-			InmobiliariaMartinez.inmueble.add(tmp);	*/
-		}
 	}
+		
+		/*int i = 1;
+		int j = 1;
+		
+		
+		for (; i <= 20; i++) {
+		    doc = r.nextInt(3000000) + 1000000;  
+		    nom = r.nextInt(nombres.length);  
+		    ap = r.nextInt(apellidos.length); 
+		    tel = r.nextInt(222222222) + 1;   
+		    String nombre = nombres[nom];  
+		    String apellido = apellidos[ap];  
+		    String tipo = "Inquilino";  
+
+		   
+		    Inquilino tmp = new Inquilino(i, doc, tel, nombre, apellido, tipo);
+		    InmobiliariaMartinez.inquilino.add(tmp);    
+		}*/
+		
+		
+		 /*for (; j <= 20; j++) {
+		        puerta = r.nextInt(9999) + 1;
+		        calle = r.nextInt(calles.length);
+		        dor = r.nextInt(4); 
+		        ban = r.nextInt(2); 
+		        coc = r.nextInt(1); 
+		        direccion = calles[calle] + " " + puerta;
+		        est = r.nextInt(estado.length); 
+		        String estadoStr = estado[est]; 
+		        pre = r.nextInt(150000) + 1; 
+		        float precio = (float) pre; 
+
+		       
+		        Inmueble tmp = new Inmueble(j, dor, ban, coc, estadoStr, direccion, precio);
+		        InmobiliariaMartinez.inmueble.add(tmp);    
+		    }
+		}*/
 	
 	
 	public void volverMenu () {

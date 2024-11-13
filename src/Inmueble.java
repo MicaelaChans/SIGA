@@ -64,10 +64,10 @@ public class Inmueble {
 	
 	public String toString() {
 		return "Dormitorios: " + getDormitorios() + 
-				" Baños: " + getBanos() + 
+				" Baï¿½os: " + getBanos() + 
 				" Cocheras: " + getCocheras() + 
 				" Estado: " + getEstado() +
-				" Dirección: " + getDireccion() +
+				" Direcciï¿½n: " + getDireccion() +
 				" Precio: " + getPrecio() +
 				" Id: " + getId();
 	}
