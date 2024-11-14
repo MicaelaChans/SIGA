@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Propietario extends Cliente {
-		public Propietario(int id, int documento, String nombre, String apellido, int telefono, String tipo, boolean confirmar) {
-			super(id, documento, nombre, apellido, telefono, tipo, confirmar);
+		public Propietario(int id, int documento, String nombre, String apellido, int telefono, String tipo) {
+			super(id, documento, nombre, apellido, telefono, tipo);
 		   }
 
 		public void Propietarios() {
@@ -15,8 +15,8 @@ public class Propietario extends Cliente {
 			return  " Nombre: " + getNombre() + ", " +
 					" Apellido: " + getApellido() + ", " +
 					" Documento: " + getDocumento() + ", " +
-					" Telefono: " + getTelefono() +", " +
-					" Confirmar: " + isConfirmar() + ", " +
+					" Telefono: " + getTelefono() + ", " +
+					" Tipo: " + getTipo() + ", " +
 					" Id: " + getId() + ", ";  
 	}
 }

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Inquilino extends Cliente {
-   public Inquilino(int id, int documento, int telefono, String nombre, String apellido, String tipo, boolean confirmar) {
-	super(id, documento, nombre, apellido, telefono, tipo, confirmar);
+   public Inquilino(int id, int documento, int telefono, String nombre, String apellido, String tipo) {
+	super(id, documento, nombre, apellido, telefono, tipo);
    }
 
 public void Inquilinos() {

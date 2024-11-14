@@ -18,9 +18,7 @@ public class InmobiliariaMartinez {
 			imprimirMenu();
 			opcion = util.leerOpcion();
 			procesarOpcion(opcion);
-			
 		}while(opcion != 0 );
-		
 		salir();
 	}
 	
@@ -32,7 +30,6 @@ public class InmobiliariaMartinez {
 		System.out.println("3- Inmuebles");
 		System.out.println("4- Agenda");
 		System.out.println("0- Salir");
-	
 	}
 	
 	public static void salir() {

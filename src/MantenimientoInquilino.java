@@ -4,7 +4,7 @@ public class MantenimientoInquilino {
 	private static Utilidad util = new Utilidad();
 	
 	public void mostrarMenu() {
-		System.out.println("Usted Ingreso al Menu de Clientes");
+		System.out.println("Usted Ingreso al Menu de Inquilinos");
 		System.out.println("1- Agregar");
 		System.out.println("2- Eliminar");
 		System.out.println("3- Modificar");
@@ -38,7 +38,6 @@ public class MantenimientoInquilino {
 	public void crearInquilino() {
 		int id = 0, documento= 0, telefono = 0;
 		String nombre = " ", apellido = " ", tipo = " "; 
-		Boolean confirmar = false;
 		
 		id = util.leerCampoInt("id");
 		documento = util.leerCampoInt("documento");
@@ -46,11 +45,10 @@ public class MantenimientoInquilino {
 		nombre = util.leerCampoStr("nombre");
 		apellido = util.leerCampoStr("apellido");
 		tipo = util.leerCampoStr("tipo");	
-		confirmar = util.leerCampoBoo("confirmar");
 		
 		
 		if (!existeId(id)) {
-			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo, confirmar);
+			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo);
 			InmobiliariaMartinez.inquilino.add(iq);
 		} else {
 			System.out.println("Error! Id Existe");
@@ -127,7 +125,6 @@ public class MantenimientoInquilino {
 			Inquilino iq = InmobiliariaMartinez.inquilino.get(i);
 			System.out.println(iq);
 		}
-		
 	}
 	
 	public void buscarInquilino() {
@@ -146,6 +143,7 @@ public class MantenimientoInquilino {
 			System.out.println("Cliente encontrado: " + tmp);
 		}
 	}
+	
 	public void volverMenu() {
 	    int opcion = 0;
 	    do {	
@@ -153,6 +151,5 @@ public class MantenimientoInquilino {
 	        opcion = util.leerOpcion();  
 	        procesarOpcion(opcion); 
 	    } while (opcion != 0);
-	}
-	
+	}	
 }

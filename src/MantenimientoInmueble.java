@@ -1,7 +1,6 @@
 
 public class MantenimientoInmueble  {
 
-	
 private static Utilidad util = new Utilidad();
 	
 	public void mostrarMenu() {
@@ -31,11 +30,9 @@ private static Utilidad util = new Utilidad();
 			break;
 		case 0: 
 			  salir();
-			
-		   
+			break;
 			default: System.out.println("Error, ingrese una opcion valida");
 		}
-		
 	}
 	
 	public void crearInmueble() {
@@ -133,8 +130,8 @@ private static Utilidad util = new Utilidad();
 	        }
 	    }
 	}
+	
 	public void volverMenu () {
 		    System.out.println("Volviendo al menú principal...");
-		
 	}
 }

@@ -33,25 +33,29 @@ public abstract class Agenda {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}		
+	}	
+	
 	public int getDocumento() {
 		return documento;
 	}
 	public void setDocumento(int documento) {
 		this.documento = documento;
-	}			
+	}		
+	
 	public int getTelefono() {
 		return telefono;
 	}
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
+	
 	public String getApellido() {
 		return apellido;
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	
 	public String getTipo() {
 		return tipo;
 	}
@@ -62,7 +66,6 @@ public abstract class Agenda {
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
@@ -73,30 +76,35 @@ public abstract class Agenda {
 	public void setDormitorios(int dormitorios) {
 		this.dormitorios = dormitorios;
 	}
+	
 	public int getBanos() {
 		return banos;
 	}
 	public void setBanos(int banos) {
 		this.banos = banos;
 	}
+	
 	public int getCocheras() {
 		return cocheras;
 	}
 	public void setCocheras(int cocheras) {
 		this.cocheras = cocheras;
 	}
+	
 	public String getEstado() {
 		return estado;
 	}
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
+	
 	public float getPrecio() {
 		return precio;
 	}
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+	
 	public String getDireccion() {
 		return direccion;
 	}
@@ -119,7 +127,6 @@ public abstract class Agenda {
 				" Dirección: " + getDireccion() + ", " +
 				" Precio: " + getPrecio() + ", " ;
 	}
-
 }
 
 	

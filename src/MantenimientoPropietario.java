@@ -28,28 +28,26 @@ public class MantenimientoPropietario {
 			case 6: volverMenu();
 				break;
 			case 0: salir();
-			
+				break;
 				default: System.out.println("Error, ingrese una opcion valida");
 			}
-			
 		}
 		
 		public void crearPropietario() {
 			int id = 0, documento= 0, telefono = 0;
-			String nombre = " ", apellido = " "; 
-			Boolean confirmar = true;
+			String nombre = " ", apellido = " ", tipo = " "; 
 			
 			id = util.leerCampoInt("id");
 			documento = util.leerCampoInt("documento");
 			telefono = util.leerCampoInt("telefono");
 			nombre = util.leerCampoStr("nombre");
 			apellido = util.leerCampoStr("apellido");
-			confirmar = util.leerCampoBoo("confirmar");
-			
+			tipo = util.leerCampoStr(tipo);
+
 			
 			if (!existeId(id)) {
-				//Propietario iq = new Propietario (id, documento, telefono, nombre, apellido, confirmar);
-				//InmobiliariaMartinez.propietario.add(iq);
+				Propietario iq = new Propietario (id, documento, apellido, nombre, telefono, tipo);
+				InmobiliariaMartinez.propietario.add(iq);
 			} else {
 				System.out.println("Error! Id Existe");
 			}
@@ -110,11 +108,9 @@ public class MantenimientoPropietario {
 		            String nombre = util.leerCampoStr("nuevo nombre");
 		            String apellido = util.leerCampoStr("nuevo apellido");
 		            int telefono = util.leerCampoInt("nuevo teléfono");
-		            boolean confirmar = util.leerCampoBoo("nuevo propietario");
 		            propietario.setNombre(nombre);
 		            propietario.setApellido(apellido);
 		            propietario.setTelefono(telefono);
-		            propietario.setConfirmar(confirmar);
 		            System.out.println("Propietario modificado.");
 		            return;
 		        }

@@ -24,43 +24,42 @@ public class BDAgenda {
 		             volverMenu();
 		            break;
 		        case 0: 
-		            salir();
+		            
 		            break;
 		        default: 
 		            System.out.println("Error, ingrese una opcion valida");
-		}
-		
+		}	
 	}
 	
 	public void buscarDocumento() {
-		int documento = util.leerCampoInt("Ingrese el número de documento del cliente"); 
+		int documento = util.leerCampoInt("Ingrese el numero de documento del cliente"); 
 		buscarPorDocumento(documento); 
 		}
 	
-		  public void buscarPorDocumento(int documento) {
-		      
-		        for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
-		            Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
-		            int doc = tmp.getDocumento();
-		            if (doc == documento) {
-		                System.out.println("Cliente encontrado: " + tmp);
-		                return;
-		            }
-		        }
-		        
-		        System.out.println("Cliente no encontrado con el documento " + documento);
-		        
-		        for (int i = 0; i < InmobiliariaMartinez.propietario.size(); i++) {
-		            Cliente tmp = InmobiliariaMartinez.propietario.get(i);
-		            int doc = tmp.getDocumento();
-		            if (doc == documento) {
-		                System.out.println("Cliente encontrado: " + tmp);
-		                return;
-		            }
-		        }
-		        System.out.println("Cliente no encontrado con el documento " + documento);
+	public void buscarPorDocumento(int documento) {
+		for (int i = 0; i < InmobiliariaMartinez.inquilino.size(); i++) {
+		Cliente tmp = InmobiliariaMartinez.inquilino.get(i);
+		int doc = tmp.getDocumento();
+		if (doc == documento) {
+			System.out.println("Cliente encontrado: " + tmp);
+			return;
+			}
+		}
+		
+		System.out.println("Cliente no encontrado con el documento " + documento);
+		
+		for (int i = 0; i < InmobiliariaMartinez.propietario.size(); i++) {
+			Cliente tmp = InmobiliariaMartinez.propietario.get(i);
+		    int doc = tmp.getDocumento();
+		    if (doc == documento) {
+		    	System.out.println("Cliente encontrado: " + tmp);
+		    	return;
+		    	}
 		    }
-	
+		
+		System.out.println("Cliente no encontrado con el documento " + documento);
+		
+	}
 	
 	public void buscarDireccion() {
 		String direccion = " ";
@@ -79,14 +78,14 @@ public class BDAgenda {
 	}
 	
 	public static void salir() {
-		System.out.println("Hasta la proxima");
+		//InmobiliariaMartinez sale = InmobiliariaMartinez();
+		//sale = salir.InmobiliariaMartinez();
 	}
-	  public void buscarAgenda() {    
-	        System.out.println("Ingrese 1 para buscar por documento (Cliente)");
-	        System.out.println("Ingrese 2 para buscar por direccion (Inmueble)");
-	        
+	
+	public void buscarAgenda() {
+		System.out.println("Ingrese 1 para buscar por documento (Cliente)");
+		System.out.println("Ingrese 2 para buscar por direccion (Inmueble)");
 	        int buscar = util.leerOpcion();
-	        
 	        if (buscar == 1) {
 	            buscarDocumento();
 	        } else if (buscar == 2){
@@ -94,14 +93,20 @@ public class BDAgenda {
 	        }
 	    }
 	  
-	  public void cargarBD() {
-		
+	 public void cargarBD() {
 		MantenimientoInquilino listar = new MantenimientoInquilino();
 		listar.listarInquilino();
+		
+		MantenimientoPropietario listar1 = new MantenimientoPropietario();
+		listar1.listarPropietario();
+		
+		MantenimientoInmueble listar2 = new MantenimientoInmueble();
+		listar2.listarInmueble();
 		
 		int nom =0, ap =0, doc =0, tel = 0, dor =0, ban =0, coc =0, dir =0, est =0, pre = 0, calle =0, puerta =0;
 		Random r = new Random();
 		String direccion = " ";
+		
 		String nombres [] = {"Amelia", "Sopia", "Diego", "Cristian", "Fernando", "Valentina", "Mateo", "Carlos", "Andres", 
 				"Julieta", "Daniela", "Pia", "Marcelo", "Esteban", "Nicolas"};
 		
@@ -125,17 +130,14 @@ public class BDAgenda {
 		    String nombre = nombres[nom];  
 		    String apellido = apellidos[ap];  
 		    String tipo = "Inquilino";  
-		    Boolean confirmar = false;
-
 		   
-		    Inquilino tmp = new Inquilino(i, doc, tel, nombre, apellido, tipo, confirmar);
+		    Inquilino tmp = new Inquilino(i, doc, tel, nombre, apellido, tipo);
 		    InmobiliariaMartinez.inquilino.add(tmp);    
 		    
-		    Propietario tmp1 = new Propietario(i, doc, apellido, nombre, tel, tipo, confirmar);
+		    Propietario tmp1 = new Propietario(i, doc, apellido, nombre, tel, tipo);
 		    InmobiliariaMartinez.propietario.add(tmp1); 
 		}
-		
-		
+
 		 for (; j <= 20; j++) {
 		        puerta = r.nextInt(9999) + 1;
 		        calle = r.nextInt(calles.length);
@@ -148,7 +150,6 @@ public class BDAgenda {
 		        pre = r.nextInt(150000) + 1; 
 		        float precio = (float) pre; 
 
-		       
 		        Inmueble tmp = new Inmueble(j, dor, ban, coc, estadoStr, direccion, precio);
 		        InmobiliariaMartinez.inmueble.add(tmp);    
 		    }
@@ -162,8 +163,8 @@ public class BDAgenda {
 	    	    submenu1 = util.leerOpcion();  
 	    	    if (submenu1 != 6 && submenu1 != 0) {  
 	    	        volver.procesarOpcion(submenu1);
-	    	    }
-	    	} while(submenu1 != 6 && submenu1 !=0 );  
+	    	        }
+	    	    } while(submenu1 != 6 && submenu1 !=0 );  
+	    	}
 	}
-}
 	
