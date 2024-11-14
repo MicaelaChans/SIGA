@@ -42,7 +42,7 @@ public class MantenimientoPropietario {
 			telefono = util.leerCampoInt("telefono");
 			nombre = util.leerCampoStr("nombre");
 			apellido = util.leerCampoStr("apellido");
-			tipo = util.leerCampoStr(tipo);
+			tipo = util.leerCampoStr("tipo");
 
 			
 			if (!existeId(id)) {
@@ -97,7 +97,7 @@ public class MantenimientoPropietario {
 			            return;
 			        }
 			    }
-			    System.out.println("No se encontró el propietario con ID " + id);
+			    System.out.println("No se encontrï¿½ el propietario con ID " + id);
 		}
 		
 		public void modificarPropietario() {
@@ -107,7 +107,7 @@ public class MantenimientoPropietario {
 		        if (propietario.getId() == id) {
 		            String nombre = util.leerCampoStr("nuevo nombre");
 		            String apellido = util.leerCampoStr("nuevo apellido");
-		            int telefono = util.leerCampoInt("nuevo teléfono");
+		            int telefono = util.leerCampoInt("nuevo telï¿½fono");
 		            propietario.setNombre(nombre);
 		            propietario.setApellido(apellido);
 		            propietario.setTelefono(telefono);
@@ -115,7 +115,7 @@ public class MantenimientoPropietario {
 		            return;
 		        }
 		    }
-		    System.out.println("No se encontró el propietario con ID " + id);
+		    System.out.println("No se encontrï¿½ el propietario con ID " + id);
 		}
 		
 		public void listarPropietario () {

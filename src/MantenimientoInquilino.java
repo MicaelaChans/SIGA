@@ -99,7 +99,7 @@ public class MantenimientoInquilino {
 		            return;
 		        }
 		    }
-		    System.out.println("No se encontró el inquilino con ID " + id);
+		    System.out.println("No se encontro el inquilino con ID " + id);
 	}
 	
 	public void modificarInquilino() {
@@ -109,7 +109,7 @@ public class MantenimientoInquilino {
 	        if (inquilino.getId() == id) {
 	            String nombre = util.leerCampoStr("nuevo nombre");
 	            String apellido = util.leerCampoStr("nuevo apellido");
-	            int telefono = util.leerCampoInt("nuevo teléfono");
+	            int telefono = util.leerCampoInt("nuevo telefono");
 	            inquilino.setNombre(nombre);
 	            inquilino.setApellido(apellido);
 	            inquilino.setTelefono(telefono);
@@ -117,7 +117,7 @@ public class MantenimientoInquilino {
 	            return;
 	        }
 	    }
-	    System.out.println("No se encontró el inquilino con ID " + id);
+	    System.out.println("No se encontro el inquilino con ID " + id);
 	}
 	
 	public void listarInquilino () {

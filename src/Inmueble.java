@@ -39,9 +39,9 @@ public class Inmueble {
 	public String getEstado() {
 		return estado;
 	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	 public void setEstado(String estado) {
+	        this.estado = "Disponible";
+	    }
 	public float getPrecio() {
 		return precio;
 	}
@@ -64,12 +64,13 @@ public class Inmueble {
 	
 	public String toString() {
 		return "Dormitorios: " + getDormitorios() + 
-				" Baños: " + getBanos() + 
+				" Banos: " + getBanos() + 
 				" Cocheras: " + getCocheras() + 
 				" Estado: " + getEstado() +
 				" Direccion: " + getDireccion() +
 				" Precio: " + getPrecio() +
 				" Id: " + getId();
+			
 	}
 	
 }

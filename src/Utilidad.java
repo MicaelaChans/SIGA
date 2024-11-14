@@ -13,7 +13,7 @@ public class Utilidad {
                 numero = Integer.parseInt(entrada);
                 esValido = true;
             } catch (NumberFormatException e) {
-                System.out.println("Entrada inválida. Por favor, ingrese un número entero.");
+                System.out.println("Error! Por favor, ingrese un numero entero.");
             }
         }
         return numero;
@@ -24,14 +24,14 @@ public class Utilidad {
         while (entrada.isEmpty()) {
             entrada = teclado.nextLine().trim();
             if (entrada.isEmpty()) {
-                System.out.println("La entrada no puede estar vacía. Intente de nuevo:");
+                System.out.println("Error! Usted no ingreso ningun dato. Intente de nuevo:");
             }
         }
         return entrada;
     }
 
     public int leerOpcion() {
-        System.out.print("Ingrese una opción: ");
+        System.out.print("Ingrese una opcion: ");
         return leerNumero();
     }
 
@@ -49,7 +49,7 @@ public class Utilidad {
             entrada = leerString();
 
             if (entrada.matches(".*\\d.*")) {
-                System.out.println("Entrada inválida. Por favor, ingrese solo letras para el campo " + campo + ".");
+                System.out.println("Error! Por favor, ingrese solo letras " + campo + ".");
             } else {
                 esValido = true;
             }
@@ -68,7 +68,7 @@ public class Utilidad {
                 numero = Float.parseFloat(entrada);
                 esValido = true;
             } catch (NumberFormatException e) {
-                System.out.println("Entrada inválida. Por favor, ingrese un número decimal.");
+                System.out.println("Error! Por favor, ingrese un numeros.");
             }
         }
         return numero;

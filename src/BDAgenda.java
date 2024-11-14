@@ -21,10 +21,9 @@ public class BDAgenda {
 		            buscarAgenda();
 		            break;
 		        case 3: 
-		             volverMenu();
+		        	 volverMenu();
 		            break;
-		        case 0: 
-		            
+		        case 0: salir();		            
 		            break;
 		        default: 
 		            System.out.println("Error, ingrese una opcion valida");
@@ -78,8 +77,8 @@ public class BDAgenda {
 	}
 	
 	public static void salir() {
-		//InmobiliariaMartinez sale = InmobiliariaMartinez();
-		//sale = salir.InmobiliariaMartinez();
+		InmobiliariaMartinez salir = new InmobiliariaMartinez();
+		salir.salir();
 	}
 	
 	public void buscarAgenda() {
