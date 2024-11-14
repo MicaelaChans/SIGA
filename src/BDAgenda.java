@@ -47,6 +47,17 @@ public class BDAgenda {
 		                return;
 		            }
 		        }
+		        
+		        System.out.println("Cliente no encontrado con el documento " + documento);
+		        
+		        for (int i = 0; i < InmobiliariaMartinez.propietario.size(); i++) {
+		            Cliente tmp = InmobiliariaMartinez.propietario.get(i);
+		            int doc = tmp.getDocumento();
+		            if (doc == documento) {
+		                System.out.println("Cliente encontrado: " + tmp);
+		                return;
+		            }
+		        }
 		        System.out.println("Cliente no encontrado con el documento " + documento);
 		    }
 	
@@ -114,10 +125,14 @@ public class BDAgenda {
 		    String nombre = nombres[nom];  
 		    String apellido = apellidos[ap];  
 		    String tipo = "Inquilino";  
+		    Boolean confirmar = false;
 
 		   
-		    Inquilino tmp = new Inquilino(i, doc, tel, nombre, apellido, tipo);
+		    Inquilino tmp = new Inquilino(i, doc, tel, nombre, apellido, tipo, confirmar);
 		    InmobiliariaMartinez.inquilino.add(tmp);    
+		    
+		    Propietario tmp1 = new Propietario(i, doc, apellido, nombre, tel, tipo, confirmar);
+		    InmobiliariaMartinez.propietario.add(tmp1); 
 		}
 		
 		

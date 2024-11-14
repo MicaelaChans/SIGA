@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Utilidad {
 	private Scanner teclado = new Scanner(System.in);
-	 
-	
 	
 	private int leerNumero() {
 		int opcion = 0;
@@ -46,4 +44,9 @@ public class Utilidad {
 		return opcion;
 	}
 	
+	public boolean leerCampoBoo(String campo) {
+		boolean opcion = true;
+		System.out.print("ingrese " + campo);
+		return opcion;
+	}
 }
