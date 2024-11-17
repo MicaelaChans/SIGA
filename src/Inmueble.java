@@ -7,6 +7,8 @@ public class Inmueble {
 	private String direccion;
 	private float precio;
 	private int id;
+	private int vincularInq;
+	private int vincularProp;
 	
 	public Inmueble(int id, int dormitorios, int banos, int cocheras, int estado, String direccion, float precio) {
 		setId(id);
@@ -62,7 +64,23 @@ public class Inmueble {
 		this.estado = estado;
 	}
 	
-	public String toString() {
+	public int getVincularInq() {
+		return vincularInq;
+	}
+
+	public void setVincularInq(int vincularInq) {
+		this.vincularInq = vincularInq;
+	}
+
+	public int getVincularProp() {
+		return vincularProp;
+	}
+
+	public void setVincularProp(int vincularProp) {
+		this.vincularProp = vincularProp;
+	}
+
+	public String toString() {		
 		return "Dormitorios: " + getDormitorios() + 
 				" Banos: " + getBanos() + 
 				" Cocheras: " + getCocheras() + 

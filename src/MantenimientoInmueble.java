@@ -53,6 +53,52 @@ private static Utilidad util = new Utilidad();
 		}
 	} 
 	    
+	private void vincularInq() {
+		MantenimientoInquilino mi = new MantenimientoInquilino();
+		int idInmueble =0, idInquilino =0, i=0, encontro =0;
+		Inmueble tmp = null;
+		idInmueble = util.leerCampoInt("Propiedad a vincular ");
+		idInquilino = util.leerCampoInt("Id Inquilino");
+		
+		while (i< InmobiliariaMartinez.inmueble.size() && encontro ==0) {
+			tmp = InmobiliariaMartinez.inmueble.get(i);
+			if (tmp.getId()== idInmueble) {
+				encontro =1;
+				if (mi.existeId(idInquilino)) {
+					tmp.setVincularInq(idInquilino);
+					InmobiliariaMartinez.inmueble.set(i, tmp);
+				}else {
+					System.out.println("El Inquilino no Existe...");
+				}
+			}
+			i++;
+		}
+		
+	}
+	
+	private void vincularPro() {
+		MantenimientoPropietario mi = new MantenimientoPropietario();
+		int idInmueble =0, idPropietario =0, i=0, encontro =0;
+		Inmueble tmp = null;
+		idInmueble = util.leerCampoInt("Propiedad a vincular ");
+		idPropietario = util.leerCampoInt("Id Propietario");
+		
+		while (i< InmobiliariaMartinez.inmueble.size() && encontro ==0) {
+			tmp = InmobiliariaMartinez.inmueble.get(i);
+			if (tmp.getId()== idInmueble) {
+				encontro =1;
+				if (mi.existeId(idPropietario)) {
+					tmp.setVincularInq(idPropietario);
+					InmobiliariaMartinez.inmueble.set(i, tmp);
+				}else {
+					System.out.println("El Propietario no Existe...");
+				}
+			}
+			i++;
+		}
+		
+	}
+	
 	public boolean existeId(int id) {
 		int i = 0;
 		boolean existe = false;
