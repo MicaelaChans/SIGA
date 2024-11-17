@@ -18,7 +18,7 @@ public class Utilidad {
         }
         return numero;
     }
-
+    
     private String leerString() {
         String entrada = "";
         while (entrada.isEmpty()) {

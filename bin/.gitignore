@@ -1,13 +1,4 @@
-/Agenda.class
-/BDAgenda.class
-/Cliente.class
-/InmobiliariaMartinez.class
-/Inmueble.class
-/Inquilino.class
-/MantenimientoInmueble.class
-/MantenimientoInquilino.class
-/Propiedades.class
-/Utilidad.class
-/Propietarios.class
 /MantenimientoPropietario.class
+/Propiedades.class
 /Propietario.class
+/Utilidad.class

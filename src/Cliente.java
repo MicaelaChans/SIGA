@@ -4,15 +4,13 @@
 		private String apellido;
 		private int documento;
 		private int telefono;
-		private String tipo;
 		private int id;
 		
-		public Cliente(int id, int documento, String nombre, String apellido, int telefono, String tipo) {
+		public Cliente(int id, int documento, String nombre, String apellido, int telefono) {
 			setNombre(nombre);
 			setApellido(apellido);
 			setDocumento(documento);
 			setTelefono(telefono);
-			setTipo(tipo);
 			setId(id);
 		}
 
@@ -40,13 +38,6 @@
 		public void setApellido(String apellido) {
 			this.apellido = apellido;
 		}
-		public String getTipo() {
-			return tipo;
-		}
-		public void setTipo(String tipo) {
-			this.tipo = tipo;
-		}
-
 		public int getId() {
 			return id;
 		}
@@ -56,12 +47,14 @@
 		}
 		
 		public String toString() {
-			return "Nombre: " + getNombre() + 
+			int num=0;
+			num = 5 - String.valueOf(getId()).length();
+			return  " Id: " + getId()+
+					" Nombre: " + getNombre() + 
 					" Apellido: " + getApellido() + 
 					" Documento: " + getDocumento() + 
-					" Telefono: " + getTelefono() +
-					" Tipo: " + getTipo() +
-					" Id: " + getId(); 
+					" Telefono: " + getTelefono();
+					
 		}
 	}
 	

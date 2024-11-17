@@ -11,7 +11,6 @@ private static Utilidad util = new Utilidad();
 		System.out.println("4- Listar");
 		System.out.println("5- Buscar");
 		System.out.println("6- Volver");
-		System.out.println("0- Salir");
 	}
 	
 	public void procesarOpcion(int opcion) {		
@@ -28,23 +27,20 @@ private static Utilidad util = new Utilidad();
 			break;
 		case 6: volverMenu();
 			break;
-		case 0: 
-			  salir();
-			break;
-			default: System.out.println("Error, ingrese una opcion valida");
+		default: System.out.println("Error, ingrese una opcion valida");
 		}
 	}
 	
 	public void crearInmueble() {
-		int id = 0, dormitorios = 0, banos = 0, cocheras = 0;
-		String estado = " ", direccion = " "; 
+		int id = 0, dormitorios = 0, banos = 0, cocheras = 0, estado = 0;
+		String direccion = " "; 
 		float precio = ' ';
 		
 		id = util.leerCampoInt("id");
 		dormitorios = util.leerCampoInt("dormitorios");
 		banos = util.leerCampoInt("banos");
 		cocheras = util.leerCampoInt("cocheras");
-		estado = util.leerCampoStr("estado");
+		estado = util.leerCampoInt("1- en venta/2-en alquiler/3-ocupada");
 		direccion = util.leerCampoStr("direccion");
 		precio = util.leerCampoFloat("precio");		
 		
@@ -70,11 +66,6 @@ private static Utilidad util = new Utilidad();
 		return existe;	
 	}	
 	
-	public static void salir() {
-		System.out.println("Hasta la proxima");
-	}
-	
-	
 	public void eliminarInmueble() {
 		int id = util.leerCampoInt("id del inmueble a eliminar");
 	    for (int i = 0; i < InmobiliariaMartinez.inmueble.size(); i++) {
@@ -85,7 +76,7 @@ private static Utilidad util = new Utilidad();
 	            return;
 	        }
 	    }
-	    System.out.println("No se encontró el inmueble con ID " + id);
+	    System.out.println("No se encontrï¿½ el inmueble con ID " + id);
 	}
 	
 	public void modificarInmueble () {
@@ -96,7 +87,7 @@ private static Utilidad util = new Utilidad();
 	            int dormitorio = util.leerCampoInt("nuevos dormitorios");
 	            int banos = util.leerCampoInt("nuevos banos");
 	            int cochera = util.leerCampoInt("nuevas cocheras");
-	            String estado = util.leerCampoStr("nuevo estado");
+	            int estado = util.leerCampoInt("nuevo estado");
 	            inmueble.setDormitorios(dormitorio);
 	            inmueble.setBanos(banos);
 	            inmueble.setCocheras(cochera);
@@ -105,7 +96,7 @@ private static Utilidad util = new Utilidad();
 	            return;
 	        }
 	    }
-	    System.out.println("No se encontró el inmueble con ID " + id);
+	    System.out.println("No se encontrï¿½ el inmueble con ID " + id);
 	}
 	
 	public void listarInmueble () {

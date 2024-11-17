@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Propiedades extends Inmueble {
-	 public Propiedades(int id, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
+	 public Propiedades(int id, int dormitorios, int banos, int cocheras, int estado, String direccion, float precio) {
 			super(id, dormitorios, banos, cocheras, estado, direccion, precio); }
 
 		public void Inmueble() {
@@ -12,10 +12,10 @@ public class Propiedades extends Inmueble {
 
 		public String toString() {
 			return "Dormitorios: " + getDormitorios() + 
-					" Baños: " + getBanos() + 
+					" Baï¿½os: " + getBanos() + 
 					" Cocheras: " + getCocheras() + 
 					" Estado: " + getEstado() +
-					" Dirección: " + getDireccion() +
+					" Direcciï¿½n: " + getDireccion() +
 					" Precio: " + getPrecio() +
 					" Id: " + getId(); 
 		}

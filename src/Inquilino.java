@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Inquilino extends Cliente {
-   public Inquilino(int id, int documento, int telefono, String nombre, String apellido, String tipo) {
-	super(id, documento, nombre, apellido, telefono, tipo);
+   public Inquilino(int id, int documento, int telefono, String nombre, String apellido) {
+	super(id, documento, nombre, apellido, telefono);
    }
 
 public void Inquilinos() {
@@ -12,11 +12,12 @@ public void Inquilinos() {
 }
 
 public String toString() {
-	return  " Nombre: " + getNombre() + ", " +
+	int num=0;
+	num = 5 - String.valueOf(getId()).length();
+	return  " Id: " + getId() + ", "+
+			" Nombre: " + getNombre() + ", " +
 			" Apellido: " + getApellido() + ", " +
 			" Documento: " + getDocumento() + ", " +
-			" Telefono: " + getTelefono() +", " +
-			" Tipo: " + getTipo() + ", " +
-			" Id: " + getId() + ", ";  
+			" Telefono: " + getTelefono() +", ";  
 	}
 }

@@ -3,12 +3,12 @@ public class Inmueble {
 	private int dormitorios;
 	private int banos;
 	private int cocheras;
-	private String estado;
+	private int estado;
 	private String direccion;
 	private float precio;
 	private int id;
 	
-	public Inmueble(int id, int dormitorios, int banos, int cocheras, String estado, String direccion, float precio) {
+	public Inmueble(int id, int dormitorios, int banos, int cocheras, int estado, String direccion, float precio) {
 		setId(id);
 		setDormitorios(dormitorios);
 		setBanos(banos);
@@ -36,12 +36,6 @@ public class Inmueble {
 	public void setCocheras(int cocheras) {
 		this.cocheras = cocheras;
 	}
-	public String getEstado() {
-		return estado;
-	}
-	 public void setEstado(String estado) {
-	        this.estado = "Disponible";
-	    }
 	public float getPrecio() {
 		return precio;
 	}
@@ -57,9 +51,15 @@ public class Inmueble {
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getEstado() {
+		return estado;
+	}
+
+	public void setEstado(int estado) {
+		this.estado = estado;
 	}
 	
 	public String toString() {
@@ -72,5 +72,6 @@ public class Inmueble {
 				" Id: " + getId();
 			
 	}
+
 	
 }

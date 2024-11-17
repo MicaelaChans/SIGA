@@ -11,7 +11,6 @@ public class MantenimientoInquilino {
 		System.out.println("4- Listar");
 		System.out.println("5- Buscar");
 		System.out.println("6- Volver");
-		System.out.println("0- Salir");
 	}
 	
 	public void procesarOpcion(int opcion) {		
@@ -27,28 +26,25 @@ public class MantenimientoInquilino {
 		case 5: buscarInquilino();
 			break;
 		case 6: volverMenu();
-			break;
-		case 0: salir();
-		
-			default: System.out.println("Error, ingrese una opcion valida");
+			break;		
+		default: System.out.println("Error, ingrese una opcion valida");
 		}
 		
 	}
 	
 	public void crearInquilino() {
 		int id = 0, documento= 0, telefono = 0;
-		String nombre = " ", apellido = " ", tipo = " "; 
+		String nombre = " ", apellido = " "; 
 		
 		id = util.leerCampoInt("id");
 		documento = util.leerCampoInt("documento");
 		telefono = util.leerCampoInt("telefono");
 		nombre = util.leerCampoStr("nombre");
 		apellido = util.leerCampoStr("apellido");
-		tipo = util.leerCampoStr("tipo");	
 		
 		
 		if (!existeId(id)) {
-			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido, tipo);
+			Inquilino iq = new Inquilino (id, documento, telefono, nombre, apellido);
 			InmobiliariaMartinez.inquilino.add(iq);
 		} else {
 			System.out.println("Error! Id Existe");
@@ -83,11 +79,6 @@ public class MantenimientoInquilino {
 		}
 		return existe;	
 	}	
-	
-	public static void salir() {
-		System.out.println("Hasta la proxima");
-	}
-	
 	
 	public void eliminarInquilino () {
 		 int id = util.leerCampoInt("id del inquilino a eliminar");
