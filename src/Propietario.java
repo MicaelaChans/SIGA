@@ -15,6 +15,6 @@ public class Propietario extends Cliente {
 					" Nombre: " + getNombre() + ", " +
 					" Apellido: " + getApellido() + ", " +
 					" Documento: " + getDocumento() + ", " +
-					" Telefono: " + getTelefono() + ", ";				  
+					" Telefono: " + getTelefono() + ". ";				  
 	}
 }

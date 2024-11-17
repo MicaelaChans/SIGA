@@ -81,13 +81,14 @@ public class Inmueble {
 	}
 
 	public String toString() {		
-		return "Dormitorios: " + getDormitorios() + 
-				" Banos: " + getBanos() + 
-				" Cocheras: " + getCocheras() + 
-				" Estado: " + getEstado() +
-				" Direccion: " + getDireccion() +
-				" Precio: " + getPrecio() +
-				" Id: " + getId();
+		return  " Id: " + getId()+ ", "+
+				" Dormitorios: " + getDormitorios() +  ", "+
+				" Banos: " + getBanos() +  ", "+
+				" Cocheras: " + getCocheras() +  ", "+
+				" Estado: " + getEstado() +  ", "+
+				" Direccion: " + getDireccion() +  ", "+
+				" Precio: " + getPrecio()+ ".";
+				
 			
 	}
 

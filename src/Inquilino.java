@@ -13,11 +13,11 @@ public void Inquilinos() {
 
 public String toString() {
 	int num=0;
-	num = 5 - String.valueOf(getId()).length();
+	num = 6 - String.valueOf(getId()).length();
 	return  " Id: " + getId() + ", "+
 			" Nombre: " + getNombre() + ", " +
 			" Apellido: " + getApellido() + ", " +
 			" Documento: " + getDocumento() + ", " +
-			" Telefono: " + getTelefono() +", ";  
+			" Telefono: " + getTelefono() +". ";  
 	}
 }
