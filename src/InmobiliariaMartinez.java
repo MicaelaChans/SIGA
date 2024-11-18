@@ -6,10 +6,7 @@ public class InmobiliariaMartinez {
     public static ArrayList<Inmueble> inmueble = new ArrayList<>();
     public static ArrayList<Agenda> agenda = new ArrayList<>();
     public static ArrayList<Propietario> propietario = new ArrayList<>();
-    public static boolean salir = false; 
-   
-    //BDAgenda cargar = new BDAgenda(); lo que dijo claudio...
-    
+    public static boolean salir = false;     
     
     public static void main(String[] args) {
         System.out.println("Bienvenidos a S.I.G.A.");

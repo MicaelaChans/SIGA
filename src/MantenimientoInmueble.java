@@ -40,7 +40,7 @@ private static Utilidad util = new Utilidad();
 		dormitorios = util.leerCampoInt("dormitorios");
 		banos = util.leerCampoInt("banos");
 		cocheras = util.leerCampoInt("cocheras");
-		estado = util.leerCampoInt("1- en venta/2-en alquiler/3-ocupada");
+		estado = util.leerCampoInt("1- No Disponible/2- Disponible");
 		direccion = util.leerCampoStr("direccion");
 		precio = util.leerCampoFloat("precio");		
 		
@@ -51,11 +51,18 @@ private static Utilidad util = new Utilidad();
 		} else {
 			System.out.println("Error! Id Existe");
 		}
+		
+		if (estado==1) {
+			vincularInq();
+			vincularPro();
+		}else if (estado==2) {
+			vincularPro();
+		}
 	} 
 	    
 	private void vincularInq() {
 		MantenimientoInquilino mi = new MantenimientoInquilino();
-		int idInmueble =0, idInquilino =0, i=0, encontro =0;
+		int idInmueble =0, i=0, encontro =0, idInquilino =0; 
 		Inmueble tmp = null;
 		idInmueble = util.leerCampoInt("Propiedad a vincular ");
 		idInquilino = util.leerCampoInt("Id Inquilino");
@@ -72,8 +79,7 @@ private static Utilidad util = new Utilidad();
 				}
 			}
 			i++;
-		}
-		
+		}		
 	}
 	
 	private void vincularPro() {
@@ -95,8 +101,7 @@ private static Utilidad util = new Utilidad();
 				}
 			}
 			i++;
-		}
-		
+		}		
 	}
 	
 	public boolean existeId(int id) {
@@ -142,15 +147,30 @@ private static Utilidad util = new Utilidad();
 	            return;
 	        }
 	    }
-	    System.out.println("No se encontr� el inmueble con ID " + id);
+	    System.out.println("No se encontro el inmueble con ID " + id);
 	}
 	
 	public void listarInmueble () {
+		int estado = util.leerCampoInt("1-No Disponible/2- Disponible");
 		for (int i=0; i< InmobiliariaMartinez.inmueble.size(); i++){
 			Inmueble inm = InmobiliariaMartinez.inmueble.get(i);
-			System.out.println(inm);
-		}
-	}
+			Propietario pr = InmobiliariaMartinez.propietario.get(i);
+			Inquilino iq = InmobiliariaMartinez.inquilino.get(i);
+			if (estado ==2) {
+				System.out.println(inm + " La propiedad pertenece a: " + pr );	
+				/*if (InmobiliariaMartinez.inmueble.isEmpty()) { 
+			    System.out.println("No hay inmuebles registrados.");
+			    return;*/					
+			}else if (estado ==1) {
+				System.out.println(inm + " La propiedad pertenece a: " + pr + " Y esta alquilada por " + iq );
+			
+			/*if(InmobiliariaMartinez.inmueble.isEmpty()) { 
+			    System.out.println("No hay inmuebles registrados.");
+			    return;*/					
+				}				
+				    //revisar con el profe el error que salta
+				}
+			}
 	
 	public void buscarInmueble() {
 		String direccion = " ";

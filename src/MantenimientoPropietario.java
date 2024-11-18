@@ -39,7 +39,6 @@ public class MantenimientoPropietario {
 			telefono = util.leerCampoInt("telefono");
 			nombre = util.leerCampoStr("nombre");
 			apellido = util.leerCampoStr("apellido");
-
 			
 			if (!existeId(id)) {
 				Propietario iq = new Propietario (id, documento, apellido, nombre, telefono);

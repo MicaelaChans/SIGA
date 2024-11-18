@@ -63,7 +63,7 @@ public class Inmueble {
 	public void setEstado(int estado) {
 		this.estado = estado;
 	}
-	
+
 	public int getVincularInq() {
 		return vincularInq;
 	}
